@@ -1,0 +1,10 @@
+.nav{
+    grid-area: nav;
+    background: rgb(40, 0, 41);
+    padding: 1em;
+}
+.nav a{
+    color: white;
+    font-size: 120%;
+    padding-bottom: 300px;
+}

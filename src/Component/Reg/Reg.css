@@ -1,0 +1,71 @@
+.Reg{
+    grid-area: reg;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "h1"
+    "img"
+    "inpread"
+    "li"
+    "name"
+    "pass"
+    "country"
+    "err"
+    "reg"
+    ;
+    
+}
+.Reg h1{
+    grid-area: h1;
+    color: rgb(0, 0, 0);
+    align-self: center;
+    justify-self: center;
+}
+.Reg img{
+    grid-area: img;
+    padding-bottom: 30px;
+    align-self: center;
+    justify-self: center;
+}
+.read{
+grid-area: inpread;
+padding-bottom: 10px;
+align-self: center;
+justify-self: center;
+}
+.Download{
+    grid-area: li;
+    padding-bottom: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.name{
+    grid-area: name;
+width: 200px;
+align-self: center;
+justify-self: center;
+}
+.pass{
+    grid-area: pass;
+    width: 200px;
+    align-self: center;
+    justify-self: center;
+}
+.registr{
+grid-area: reg;
+align-self: center;
+justify-self: center;
+}
+.country{
+    grid-area: country;
+width: 200px;
+align-self: center;
+justify-self: center;
+}
+.err{
+    grid-area: err;
+    color: black;
+    align-self: center;
+    justify-self: center;
+}

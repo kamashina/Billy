@@ -1,0 +1,27 @@
+.singlepage-wrapper{
+   display: grid;
+grid-template-rows: auto 1fr;
+grid-template-columns: 230px 10fr;
+grid-template-areas: 
+"h h"
+"nav cont"
+"footer footer"
+;
+}
+
+.content{
+   min-height: 600px;
+   height: auto;
+    grid-area: cont;
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: 1em;
+    }
+html
+    {
+       margin: 0;
+    }
+body
+    {
+       margin: 0;
+    }

@@ -1,0 +1,13 @@
+.footer{
+    grid-area: footer;
+    background-color: rgb(15, 240, 232);
+    background: rgb(40, 0, 41);
+    padding: 1em;
+}
+.footer a{
+    color: rgb(255, 255, 255);
+}
+.footer p{
+    color: rgb(255, 255, 255);
+
+}

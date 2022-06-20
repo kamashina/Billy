@@ -1,0 +1,35 @@
+.header{
+    display: grid;
+    grid-area: h;
+    background: rgb(40, 0, 41);
+    padding: 1em;
+    grid-template-rows: auto ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i main login"
+}
+.header img{
+    grid-area: i;
+    width: 100px;
+    grid-column: 1;
+}
+.header h1{
+    grid-area: h1;
+    grid-column: 2;
+    color: white;
+    min-height: 1em;
+    display: table-cell;
+    vertical-align: middle;
+    align-self: center;
+    justify-self: center;
+}
+.main{
+    grid-area: main;
+    color: white;
+    font-size: 200%;
+}
+.login{
+    color: white;
+    align-self: right;
+    justify-self: right;
+}
