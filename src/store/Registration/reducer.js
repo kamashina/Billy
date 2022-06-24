@@ -1,9 +1,10 @@
-import { CHANGE_PAROL } from './action';
+import { CHANGE_PAROL, SET_NICKNAME, SET_COUNTRY } from './action';
 
 export const defaultState = {
-  login: '',
-  count: '',
+  nick: '',
+  country: '',
   parol: false,
+  avatar: 'defaultava.png',
 };
 
 // eslint-disable-next-line default-param-last
@@ -13,6 +14,16 @@ export const regReducer = (state = defaultState, action) => {
       return {
         ...state,
         parol: action.payload,
+      };
+    case SET_NICKNAME:
+      return {
+        ...state,
+        nick: action.payload,
+      };
+    case SET_COUNTRY:
+      return {
+        ...state,
+        country: action.payload,
       };
   }
   return state;

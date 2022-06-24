@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setParol } from '../../store/Registration/action';
+import { useDispatch, useSelector } from 'react-redux';
+import { setParol, setNick, setCountry } from '../../store/Registration/action';
 import './Reg.css';
 
 function Reg() {
-  const [Avatar] = useState('defaultava.png');
+  const logo = useSelector((state) => state.registration.avatar);
   const dispatch = useDispatch();
   let password;
   const mypass = '2';
@@ -19,12 +19,12 @@ function Reg() {
       setError('КАКАЯ ЖАЛОСТЬ');
     }
   };
-  const Nickname = (event) => { nick = event.target.value; };
-  const Country = (event) => { country = event.target.value; };
+  const Nickname = (event) => { dispatch(setNick(event.target.value)); };
+  const Country = (event) => { dispatch(setCountry(event.target.value)); };
   return (
     <reg className="Reg">
       <h1>ВОЙДИ</h1>
-      <img src={Avatar} alt="avatar" />
+      <img src={logo} alt="avatar" />
       <input className="name" type="text" onChange={Nickname} placeholder="Логин" />
       <input className="pass" type="password" onChange={Inpass} placeholder="Пароль" />
       <input className="country" type="text" onChange={Country} placeholder="Страна" />

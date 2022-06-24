@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider, useSelector } from 'react-redux';
-import { useState } from 'react';
 import rootReducer from './store/reducers';
 import Header from './Component/Header/Header';
 import Sorti from './Component/Sorti/Sorti';
@@ -12,7 +11,6 @@ import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
 import Reg from './Component/Reg/Reg';
-import { setParol } from './store/Registration/action';
 
 function App() {
   const sel = useSelector((state) => state.registration.parol);

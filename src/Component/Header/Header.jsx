@@ -1,9 +1,9 @@
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
-function Header(props) {
-  const reg = props;
-  const nick = reg.name;
+function Header() {
+  const nick = useSelector((state) => state.registration.nick);
   const logo = 'sun.png';
 
   return (
