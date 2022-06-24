@@ -54,7 +54,7 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "author": "",
+  "author": "Kamran Sharif <sharif.kamrna@mail.ru>",
   "license": "ISC",
   "keywords": [
     "https://github.com/kamashina/lab3.git"
@@ -76,5 +76,6 @@
     "prettier": "2.7.1",
     "prettier-eslint": "^15.0.1",
     "raw.macro": "^0.4.2"
-  }
+  },
+  "repository": "https://github.com/kamashina/Billy.git"
 }
