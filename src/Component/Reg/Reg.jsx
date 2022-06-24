@@ -7,7 +7,7 @@ function Reg() {
   const logo = useSelector((state) => state.registration.avatar);
   const dispatch = useDispatch();
   let password;
-  const mypass = '2';
+  const mypass = '123456789';
   const [Error, setError] = useState('');
   const Inpass = (event) => {
     password = event.target.value;
