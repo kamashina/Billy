@@ -1,11 +1,12 @@
 import { CHANGE_PAROL } from './action';
 
-const defaultState = {
+export const defaultState = {
   login: '',
   count: '',
   parol: false,
 };
 
+// eslint-disable-next-line default-param-last
 export const regReducer = (state = defaultState, action) => {
   switch (action.type) {
     case CHANGE_PAROL:

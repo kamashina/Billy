@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
+import { useState } from 'react';
 import rootReducer from './store/reducers';
 import Header from './Component/Header/Header';
 import Sorti from './Component/Sorti/Sorti';
@@ -10,29 +11,41 @@ import Navbar from './Component/Navbar/Navbar';
 import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
-import RegContainer from './Component/Reg/RegContainer';
+import Reg from './Component/Reg/Reg';
+import { setParol } from './store/Registration/action';
 
-const store = createStore(rootReducer);
 function App() {
+  const sel = useSelector((state) => state.registration.parol);
+  if (sel === false) {
+    return (
+      <Reg />
+    );
+  }
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <RegContainer />
-        <div className="singlepage-wrapper">
-          <Header />
-          <Navbar />
-          <div className="content">
-            <Routes>
-              <Route path="/Profile" element={<Profile />} />
-              <Route path="/Readfile" element={<Readfile />} />
-              <Route path="/Sorti" element={<Sorti />} />
-              <Route path="/Main" element={<Main />} />
-            </Routes>
-          </div>
-          <Footer />
+    <BrowserRouter>
+      <div className="singlepage-wrapper">
+        <Header />
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Readfile" element={<Readfile />} />
+            <Route path="/Sorti" element={<Sorti />} />
+            <Route path="/Main" element={<Main />} />
+          </Routes>
         </div>
-      </BrowserRouter>
-    </Provider>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
-export default App;
+
+function AppWrapper() {
+  const store = createStore(rootReducer);
+
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+} export default AppWrapper;

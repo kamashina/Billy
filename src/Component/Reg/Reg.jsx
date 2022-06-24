@@ -1,18 +1,20 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setParol } from '../../store/Registration/action';
 import './Reg.css';
-function Reg(props) {
+
+function Reg() {
   const [Avatar] = useState('defaultava.png');
-  let password; let nick; let
-    country;
-  const mypass = '123456789';
+  const dispatch = useDispatch();
+  let password;
+  const mypass = '2';
   const [Error, setError] = useState('');
   const Inpass = (event) => {
     password = event.target.value;
   };
   const Pass = () => {
     if (mypass === password) {
-      props.setParol(true);
-      console.log(props.parol);
+      dispatch(setParol(true));
     } else {
       setError('КАКАЯ ЖАЛОСТЬ');
     }

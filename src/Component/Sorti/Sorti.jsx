@@ -1,5 +1,6 @@
 import './Sorti.css';
 import React, { useState } from 'react';
+import { defaultState } from '../../store/Registration/reducer';
 
 function Sorti() {
   let arr = [];
@@ -46,6 +47,7 @@ function Sorti() {
       }
       return sorti;
     });
+    console.log(defaultState.parol);
   }
   function clearState() {
     setSort();
