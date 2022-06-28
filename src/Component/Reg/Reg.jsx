@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setParol, setNick, setCountry } from '../../store/Registration/action';
+import {
+  setParol, setNick, setCountry, setID,
+} from '../../store/Registration/action';
 import './Reg.css';
 
 function Reg() {
@@ -15,6 +17,7 @@ function Reg() {
   const Pass = () => {
     if (mypass === password) {
       dispatch(setParol(true));
+      dispatch(setID(Math.random()));
     } else {
       setError('КАКАЯ ЖАЛОСТЬ');
     }

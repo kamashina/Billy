@@ -8,11 +8,12 @@ function CreatePosts() {
   const [text, setText] = useState();
   const [posts, setPost] = useState([]);
   const nick = useSelector((state) => state.registration.nick);
+  const ID = useSelector((state) => state.registration.id);
   const red = useSelector((state) => state.Dialogs);
   const dispatch = useDispatch();
   function addPost() {
     const newPost = {
-      id: Math.random(),
+      id: ID,
       value: text,
       user: nick,
     };
