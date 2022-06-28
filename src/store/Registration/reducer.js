@@ -1,14 +1,14 @@
 import { CHANGE_PAROL, SET_NICKNAME, SET_COUNTRY } from './action';
 
-export const defaultState = {
-  nick: '',
-  country: '',
+export const UsersState = {
+  nick: null,
+  country: null,
   parol: false,
   avatar: 'defaultava.png',
 };
 
 // eslint-disable-next-line default-param-last
-export const regReducer = (state = defaultState, action) => {
+export const UserReducer = (state = UsersState, action) => {
   switch (action.type) {
     case CHANGE_PAROL:
       return {

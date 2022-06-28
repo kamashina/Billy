@@ -11,9 +11,11 @@ import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
 import Reg from './Component/Reg/Reg';
+import CreatePosts from './Component/Posts/CreatePosts';
 
 function App() {
   const sel = useSelector((state) => state.registration.parol);
+
   if (sel === false) {
     return (
       <Reg />
@@ -30,6 +32,7 @@ function App() {
             <Route path="/Readfile" element={<Readfile />} />
             <Route path="/Sorti" element={<Sorti />} />
             <Route path="/Main" element={<Main />} />
+            <Route path="/Posts" element={<CreatePosts />} />
           </Routes>
         </div>
         <Footer />

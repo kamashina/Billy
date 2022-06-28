@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { regReducer } from './Registration/reducer';
+import { DialogReducer } from './Dialogs/reducer';
+import { UserReducer } from './Registration/reducer';
 
 export default combineReducers({
-  registration: regReducer,
+  registration: UserReducer,
+  Dialogs: DialogReducer,
 });

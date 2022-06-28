@@ -7,7 +7,6 @@ function Profile() {
   const count = useSelector((state) => state.registration.country);
   const logo = useSelector((state) => state.registration.avatar);
   const dispatch = useDispatch();
-
   const Logout = () => {
     dispatch(setParol(false));
   };
