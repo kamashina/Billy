@@ -12,6 +12,7 @@ import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
 import Reg from './Component/Reg/Reg';
 import CreatePosts from './Component/Posts/CreatePosts';
+import Showcase from './Component/Product/Showcase';
 
 function App() {
   const sel = useSelector((state) => state.registration.parol);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/Sorti" element={<Sorti />} />
             <Route path="/Main" element={<Main />} />
             <Route path="/Posts" element={<CreatePosts />} />
+            <Route path="/Product" element={<Showcase />} />
           </Routes>
         </div>
         <Footer />
