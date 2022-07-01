@@ -12,7 +12,7 @@ app.post('/auth/login', (req, res) => {
  fullname: 'камашина',
     }, 
     '123', 
-    )
+    );
  res.json({
     parol: true,
     token,
