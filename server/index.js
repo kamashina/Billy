@@ -1,15 +1,20 @@
 import express  from "express";
 import jwt from "jsonwebtoken"
+import mongoose from "mongoose";
+mongoose
+ .connect('mongodb+srv://admin:<12345>@cluster0.f3hdq.mongodb.net/?retryWrites=true&w=majority')
+    .then(()=>console.log('DB ok'))
+    .catch((err)=>console.log('db error' , err))
 const app = express();
 app.use(express.json());
 app.get('/' , (req, res) =>{
-res.send('пидор Hello World');
+res.send(' Hello World');
 });
-app.post('/auth/login', (req, res) => {
+app.post('/Reg', (req, res) => {
     console.log(req.body)
     const token = jwt.sign({
- email: req.body.email,
- fullname: 'камашина',
+ nick: req.body.nick,
+country: req.body.country
     }, 
     '123', 
     );
@@ -19,7 +24,7 @@ app.post('/auth/login', (req, res) => {
  })
 })
 app.listen(1983 , (err) => {
-    if(err){
+    if(err){ 
         return console.log(err)
     }
         return console.log('Serv OK')
