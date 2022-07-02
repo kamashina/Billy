@@ -2,12 +2,12 @@ export const CHANGE_PAROL = 'CHANGE_PAROL';
 export const SET_NICKNAME = 'SET_NICK';
 export const SET_COUNTRY = 'SET_COUNTRY';
 export const SET_ID = 'SET_ID';
-export const setParol = (parol) => ({
+export const setParol = (password) => ({
   type: CHANGE_PAROL,
-  payload: parol,
+  payload: password,
 });
 
-export const setNick = (nick) => ({
+export const setEmail = (nick) => ({
   type: SET_NICKNAME,
   payload: nick,
 });

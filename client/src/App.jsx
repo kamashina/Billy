@@ -15,7 +15,7 @@ import CreatePosts from './Component/Posts/CreatePosts';
 import Showcase from './Component/Product/Showcase';
 
 function App() {
-  const sel = useSelector((state) => state.registration.parol);
+  const sel = useSelector((state) => state.registration.password);
 
   if (sel === false) {
     return (

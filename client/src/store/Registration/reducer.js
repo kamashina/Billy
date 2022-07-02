@@ -3,9 +3,9 @@ import {
 } from './action';
 
 export const UsersState = {
-  nick: null,
-  country: null,
-  parol: true,
+  email: '',
+  country: '',
+  password: false,
   avatar: 'defaultava.png',
   id: null,
 };
@@ -16,12 +16,12 @@ export const UserReducer = (state = UsersState, action) => {
     case CHANGE_PAROL:
       return {
         ...state,
-        parol: action.payload,
+        password: action.payload,
       };
     case SET_NICKNAME:
       return {
         ...state,
-        nick: action.payload,
+        Email: action.payload,
       };
     case SET_COUNTRY:
       return {

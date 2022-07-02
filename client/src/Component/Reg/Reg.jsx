@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setParol, setNick, setCountry, setID,
+  setParol, setEmail, setCountry, setID,
 } from '../../store/Registration/action';
 import './Reg.css';
 
@@ -22,13 +22,13 @@ function Reg() {
       setError('КАКАЯ ЖАЛОСТЬ');
     }
   };
-  const Nickname = (event) => { dispatch(setNick(event.target.value)); };
+  const Email = (event) => { dispatch(setEmail(event.target.value)); };
   const Country = (event) => { dispatch(setCountry(event.target.value)); };
   return (
     <reg className="Reg">
       <h1>ВОЙДИ</h1>
       <img src={logo} alt="avatar" />
-      <input className="name" type="text" onChange={Nickname} placeholder="Логин" />
+      <input className="name" type="text" onChange={Email} placeholder="Почта" />
       <input className="pass" type="password" onChange={Inpass} placeholder="Пароль" />
       <input className="country" type="text" onChange={Country} placeholder="Страна" />
       <p className="err">{Error}</p>
