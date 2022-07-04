@@ -2,15 +2,17 @@ import mongoose from 'mongoose'
 const UserSchema = mongoose.Schema({
   email: {
     type: String,
-    required: true
+    required: true, // обязательность заполнения
+    unique: true, // уникальность
   },
   nickname: {
     type: String,
-    required: true
+    required: true, // обязательность заполнения
+    unique: true, // уникальность
   },
   passwordHash: {
     type: String,
-    required: true
+    required: true // обязательность заполнения
   },
   avatar: String
 },
