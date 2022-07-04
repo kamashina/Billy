@@ -1,31 +1,29 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setParol } from '../../store/Registration/action';
+import { setUser } from '../../store/Reduxauth/login/action';
 import './Profile.css';
 
 function Profile() {
-  const nick = useSelector((state) => state.registration.nick);
-  const count = useSelector((state) => state.registration.country);
-  const logo = useSelector((state) => state.registration.avatar);
+  const email = useSelector((state) => state.authorization.data.email);
+  const nick = useSelector((state) => state.authorization.data.nickname);
   const dispatch = useDispatch();
   const Logout = () => {
-    dispatch(setParol(false));
+    dispatch(setUser(null));
   };
   return (
     <profile className="profile">
       <h1>
         Профиль
         {' '}
-        {nick}
+        {email}
       </h1>
-      <img src={logo} alt="ava" />
       <p>Данные аккаунта:</p>
       <ul>
-        Логин:
-        {nick}
+        Почта:
+        {email}
       </ul>
       <ul>
-        Страна:
-        {count}
+        Ник:
+        {nick}
       </ul>
       <button type="button" className="but" onClick={Logout}>
         Выход

@@ -1,7 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { createStore } from 'redux';
-import { Provider, useSelector } from 'react-redux';
-import rootReducer from './store/reducers';
+import { Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Header from './Component/Header/Header';
 import Sorti from './Component/Sorti/Sorti';
 import Readfile from './Component/Readfile/Readfile';
@@ -10,20 +8,19 @@ import Navbar from './Component/Navbar/Navbar';
 import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
-import Reg from './Component/Reg/Reg';
 import CreatePosts from './Component/Posts/CreatePosts';
 import Showcase from './Component/Product/Showcase';
+import Auth from './Component/Auth/Auth';
 
 function App() {
-  const sel = useSelector((state) => state.registration.password);
-
-  if (sel === false) {
+  const token = useSelector((state) => state.authorization.data.token);
+  if (!token) {
     return (
-      <Reg />
+      <Auth />
     );
   }
   return (
-    <BrowserRouter>
+    <div>
       <div className="singlepage-wrapper">
         <Header />
         <Navbar />
@@ -39,16 +36,6 @@ function App() {
         </div>
         <Footer />
       </div>
-    </BrowserRouter>
+    </div>
   );
-}
-
-function AppWrapper() {
-  const store = createStore(rootReducer);
-
-  return (
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
-} export default AppWrapper;
+} export default App;

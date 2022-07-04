@@ -1,36 +1,31 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  setParol, setEmail, setCountry, setID,
-} from '../../store/Registration/action';
+import axios from 'axios';
 import './Reg.css';
+import React, { useState } from 'react';
 
 function Reg() {
-  const logo = useSelector((state) => state.registration.avatar);
-  const dispatch = useDispatch();
-  let password;
-  const mypass = '2';
-  const [Error, setError] = useState('');
-  const Inpass = (event) => {
-    password = event.target.value;
-  };
+  const [passw, setPass] = useState();
+  const [nick, setNick] = useState();
+  const [pochta, setPochta] = useState();
   const Pass = () => {
-    if (mypass === password) {
-      dispatch(setParol(true));
-      dispatch(setID(Math.random()));
-    } else {
-      setError('КАКАЯ ЖАЛОСТЬ');
-    }
+    axios({
+      method: 'POST',
+      url: 'http://localhost:1983/auth/register',
+      data: {
+        email: pochta,
+        password: passw,
+        nickname: nick,
+      },
+    }).then((response) => {
+      console.log(response);
+    })
+      .catch((error) => { console.log(error); });
   };
-  const Email = (event) => { dispatch(setEmail(event.target.value)); };
-  const Country = (event) => { dispatch(setCountry(event.target.value)); };
   return (
     <reg className="Reg">
-      <h1>ВОЙДИ</h1>
-      <img src={logo} alt="avatar" />
-      <input className="name" type="text" onChange={Email} placeholder="Почта" />
-      <input className="pass" type="password" onChange={Inpass} placeholder="Пароль" />
-      <input className="country" type="text" onChange={Country} placeholder="Страна" />
+      <h1>Регистрация</h1>
+      <input className="name" type="text" onChange={(event) => setPochta(event.target.value)} placeholder="Почта" />
+      <input className="pass" type="password" onChange={(event) => setPass(event.target.value)} placeholder="Пароль" />
+      <input className="country" type="text" onChange={(event) => setNick(event.target.value)} placeholder="Ник" />
       <p className="err">{Error}</p>
       <button type="button" className="registr" onClick={Pass}>Войти</button>
     </reg>
