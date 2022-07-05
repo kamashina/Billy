@@ -7,8 +7,9 @@ import './Posts.css';
 function CreatePosts() {
   const [text, setText] = useState();
   const [posts, setPost] = useState([]);
-  const nick = useSelector((state) => state.registration.nick);
-  const ID = useSelector((state) => state.registration.id);
+  const nick = useSelector((state) => state.authorization.data.nick);
+  // eslint-disable-next-line no-underscore-dangle
+  const ID = useSelector((state) => state.authorization.data._id);
   const red = useSelector((state) => state.Dialogs);
   const dispatch = useDispatch();
   function addPost() {

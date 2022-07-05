@@ -1,8 +1,11 @@
 import axios from 'axios';
 import './Reg.css';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../../store/Reduxauth/login/action';
 
 function Reg() {
+  const dispatch = useDispatch();
   const [passw, setPass] = useState();
   const [nick, setNick] = useState();
   const [pochta, setPochta] = useState();
@@ -16,9 +19,9 @@ function Reg() {
         nickname: nick,
       },
     }).then((response) => {
-      console.log(response);
+      dispatch(setUser(response.data));
     })
-      .catch((error) => { console.log(error); });
+      .catch((error) => console.log(error));
   };
   return (
     <reg className="Reg">

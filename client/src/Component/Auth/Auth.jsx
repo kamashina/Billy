@@ -4,8 +4,8 @@ import Reg from './reg/Reg';
 function Auth() {
   return (
     <div>
-      <Login />
       <Reg />
+      <Login />
     </div>
   );
 } export default Auth;
