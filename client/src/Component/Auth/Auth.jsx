@@ -1,14 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import Login from './login/Login';
-import Reg from './reg/Reg';
 
 function Auth() {
   return (
     <div>
-      <NavLink to="./reg">Регистрация</NavLink>
-      <Reg />
-      <NavLink to="./login">Вход</NavLink>
-      <Login />
+      <NavLink to="client/src/Component/Auth/reg/Reg.jsx">Регистрация</NavLink>
+      <NavLink to="client/src/Component/Auth/login/Login.jsx">Вход</NavLink>
     </div>
   );
 } export default Auth;

@@ -8,7 +8,7 @@ function Profile() {
   const nick = useSelector((state) => state.authorization.data.nickname);
   const Logout = () => {
     localStorage.removeItem('token');
-    dispatch(setAuth(false));
+    dispatch(setAuth('null'));
   };
   return (
     <profile className="profile">
