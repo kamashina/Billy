@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import instance from './axios';
 import Header from './Component/Header/Header';
 import Sorti from './Component/Sorti/Sorti';
 import Readfile from './Component/Readfile/Readfile';
@@ -11,9 +13,22 @@ import Profile from './Component/Profile/Profile';
 import CreatePosts from './Component/Posts/CreatePosts';
 import Showcase from './Component/Product/Showcase';
 import Auth from './Component/Auth/Auth';
+import { setUser } from './store/Reduxauth/login/action';
 
 function App() {
-  const token = useSelector((state) => state.authorization.data.token);
+  const dispatch = useDispatch();
+  const token = localStorage.getItem('token');
+  useEffect(() => {
+    const userData = async () => {
+      await instance.get('/auth/me', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((response) => {
+          dispatch(setUser(response.data));
+        });
+    };
+    userData();
+  }, []);
   if (!token) {
     return (
       <Auth />

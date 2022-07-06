@@ -1,10 +1,8 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { setUser } from '../../../store/Reduxauth/login/action';
+import './Login.css';
 
 function Login() {
-  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -17,12 +15,12 @@ function Login() {
         password: user.password,
       })
       .then((response) => {
-        dispatch(setUser(response.data));
+        localStorage.setItem('token', response.data.token);
       });
   };
   return (
+
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h1>Вход</h1>
       <input
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...register('email')}
@@ -34,7 +32,9 @@ function Login() {
         placeholder="Пароль"
         type="password"
       />
-      <input type="submit" />
+      <input
+        type="submit"
+      />
     </form>
   );
 }

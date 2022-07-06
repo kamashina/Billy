@@ -1,13 +1,11 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { setUser } from '../../store/Reduxauth/login/action';
+import { useSelector } from 'react-redux';
 import './Profile.css';
 
 function Profile() {
   const email = useSelector((state) => state.authorization.data.email);
   const nick = useSelector((state) => state.authorization.data.nickname);
-  const dispatch = useDispatch();
   const Logout = () => {
-    dispatch(setUser(null));
+    localStorage.removeItem('token');
   };
   return (
     <profile className="profile">

@@ -1,0 +1,8 @@
+.login{
+    grid-area: login;
+    display: grid;
+}
+.login h1{
+    grid-area: h1;
+    color: black;
+}
