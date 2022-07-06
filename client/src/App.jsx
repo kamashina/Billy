@@ -22,8 +22,8 @@ function App() {
   const fsfk = useSelector((state) => state.authorization.auth);
   const token = (localStorage.getItem('token'));
   useEffect(() => {
-    const userData = async () => {
-      await instance.get('/auth/me', {
+    const userData = () => {
+      instance.get('/auth/me', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {
