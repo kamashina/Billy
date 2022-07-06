@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import instance from './axios';
 import Header from './Component/Header/Header';
 import Sorti from './Component/Sorti/Sorti';
@@ -18,9 +18,10 @@ import { setUser } from './store/Reduxauth/login/action';
 function App() {
   const dispatch = useDispatch();
   const token = localStorage.getItem('token');
+  const fsfk = useSelector((state) => state.authorization.auth);
   useEffect(() => {
-    const userData = async () => {
-      await instance.get('/auth/me', {
+    const userData = () => {
+      instance.get('/auth/me', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {
@@ -28,7 +29,7 @@ function App() {
         });
     };
     userData();
-  }, []);
+  }, [fsfk]);
   if (!token) {
     return (
       <Auth />

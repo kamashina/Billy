@@ -1,8 +1,11 @@
 import {
-  CHANGE_DATA,
+  CHANGE_DATA, CHANGE_AUTH,
 } from './action';
 
-export const UsersState = { data: {} };
+export const UsersState = {
+  data: {},
+  auth: false,
+};
 
 // eslint-disable-next-line default-param-last
 export const UserReducer = (state = UsersState, action) => {
@@ -11,6 +14,11 @@ export const UserReducer = (state = UsersState, action) => {
       return {
         ...state,
         data: action.payload,
+      };
+    case CHANGE_AUTH:
+      return {
+        ...state,
+        auth: action.payload,
       };
   }
   return state;
