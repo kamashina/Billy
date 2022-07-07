@@ -1,12 +1,12 @@
 .login{
     display: grid;
-    margin-top: 80px;
-    gap: 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-top: 40px;
+    gap:10px;
     width: 420px;
-  height: 400;
+  height: 280px;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
   border-radius: 20px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "1"
     "2"
@@ -20,12 +20,12 @@ color: white;
     }
 .inp1{
     grid-area: 2;
-    font-size:30px;
+    font-size:20px;
     font-weight:bold;
     border-radius: 10px;
   color:rgb(40, 0, 41);
 }.inp2{
-     font-size:30px;
+     font-size:20px;
     font-weight:bold;
   color:rgb(40, 0, 41);
   border-radius: 10px;

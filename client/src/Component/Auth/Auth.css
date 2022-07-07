@@ -2,4 +2,10 @@
    display: grid;
    background-color: black;
    justify-items: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+html
+{
+   margin: 0;
 }

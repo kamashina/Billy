@@ -13,8 +13,10 @@ grid-template-areas:
    min-height: 800px;
    height: auto;
     grid-area: cont;
-    margin-left: auto;
-    margin-right: auto;
+    color: white;
+    padding: 1em;
+    justify-self: center;
+    margin-top: 40px;
     }
 html
     {
