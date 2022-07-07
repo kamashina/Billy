@@ -24,7 +24,7 @@ function CreatePosts() {
   }
   return (
     <div>
-      <textarea
+      <input
         onChange={(event) => setText(event.target.value)}
         placeholder="Сообщение"
         value={text}

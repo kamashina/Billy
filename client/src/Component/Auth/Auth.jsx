@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from '../Header/Header';
 import Login from './login/Login';
-import Reg from './reg/Reg';
+import Reg from './Reg/Reg';
 import './Auth.css';
 
 function Auth() {
