@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import instance from '../../../axios';
 import { setAuth } from '../../../store/Reduxauth/login/action';
 import './Login.css';
 
@@ -12,8 +12,8 @@ function Login() {
   } = useForm();
 
   const onSubmit = (user) => {
-    axios
-      .post('http://localhost:1983/auth/login', {
+    instance
+      .post('/auth/login', {
         email: user.email,
         password: user.password,
       })

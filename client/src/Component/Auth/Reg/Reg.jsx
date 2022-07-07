@@ -1,8 +1,8 @@
-import axios from 'axios';
 import './Reg.css';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setAuth } from '../../../store/Reduxauth/login/action';
+import instance from '../../../axios';
 
 function Reg() {
   const dispatch = useDispatch();
@@ -10,9 +10,9 @@ function Reg() {
   const [nick, setNick] = useState();
   const [pochta, setPochta] = useState();
   const Pass = () => {
-    axios({
+    instance({
       method: 'POST',
-      url: 'http://localhost:1983/auth/register',
+      url: '/auth/register',
       data: {
         email: pochta,
         password: passw,
@@ -31,7 +31,6 @@ function Reg() {
       <input className="email" type="text" onChange={(event) => setPochta(event.target.value)} placeholder="Почта" />
       <input className="nick" type="text" onChange={(event) => setNick(event.target.value)} placeholder="Ник" />
       <input className="pass" type="password" onChange={(event) => setPass(event.target.value)} placeholder="Пароль" />
-      <p className="err">{Error}</p>
       <button type="button" className="registr" onClick={Pass}>Войти</button>
     </reg>
   );
