@@ -3,6 +3,10 @@
     margin-top: 80px;
     gap: 10px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 420px;
+  height: 400;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  border-radius: 20px;
     grid-template-areas:
     "1"
     "2"
@@ -18,11 +22,13 @@ color: white;
     grid-area: 2;
     font-size:30px;
     font-weight:bold;
+    border-radius: 10px;
   color:rgb(40, 0, 41);
 }.inp2{
      font-size:30px;
     font-weight:bold;
   color:rgb(40, 0, 41);
+  border-radius: 10px;
     grid-area: 3;
 }.inpsub{
     grid-area: sub;
@@ -32,6 +38,7 @@ background-image: linear-gradient(to left, #553c9a, #b393d3);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
+    border-radius: 20px;
     display: inline-block;
     font-size: 16px;
 }

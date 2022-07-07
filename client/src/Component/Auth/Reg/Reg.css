@@ -1,21 +1,28 @@
 .Reg{
 display: grid;
-margin-top: 20px;
+margin-top: 80px;
+width: 420px;
+  height: 400;
+  border-radius: 20px;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
     gap: 10px;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr
 }
 .email{
     grid-area: 2;
     font-size:30px;
+    border-radius: 10px;
     font-weight:bold;
   color:rgb(40, 0, 41);
 }.nick{
     grid-area: 3;
     font-size:30px;
+    border-radius: 10px;
     font-weight:bold;
   color:rgb(40, 0, 41);
 }.pass{
 grid-area: 4;
+border-radius: 10px;
 font-size:30px;
 font-weight:bold;
 color:rgb(40, 0, 41);
@@ -28,5 +35,6 @@ color:rgb(40, 0, 41);
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 20px;
     font-size: 16px;
 }
