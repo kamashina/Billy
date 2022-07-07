@@ -1,21 +1,34 @@
-.container{
-    width: auto;
-    height: auto;;
+.bubble{
+    position: relative;
     background-image: linear-gradient(to left, #553c9a, #b393d3);
-    border-radius: 5px;
-    margin-top: 5px;
-    word-break: break-all;
-}.user{
+	border-radius: .4em;
+}.bubble:after{
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+    background-image: linear-gradient(to right, #553c9a, #b393d3);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+
+.user{
    justify-self: start; 
-   background-image: linear-gradient(to left, #553c9a, #b393d3);
     border: none;
     color: white;
 padding: 6px;
     text-align: center;
     text-decoration: none;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
     border-radius: 20px;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
 }.message{
     justify-self: start; 
     font-size: 1.6rem;
