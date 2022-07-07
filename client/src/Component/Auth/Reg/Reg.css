@@ -1,5 +1,6 @@
 .Reg{
 display: grid;
+grid-area: regi;
 margin-top: 40px;
 width: 420px;
   height: 400px;

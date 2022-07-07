@@ -1,3 +1,29 @@
 .Sorti{
     grid-area: sorti;
+    }.btn{
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 16px;
+    }.viv{
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 14px;
+    }.mas{
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
     }

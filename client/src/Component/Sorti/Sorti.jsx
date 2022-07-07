@@ -57,14 +57,14 @@ function Sorti() {
         <input type="text" placeholder="Через пробел..." onChange={(event) => setValue(event.target.value)} />
       </div>
       <div>
-        <line onClick={clearState}>Очистить</line>
-        <line onClick={Withconsole}>Отсортировать</line>
+        <line className="btn" onClick={clearState}>Очистить</line>
+        <line className="btn" onClick={Withconsole}>Отсортировать</line>
       </div>
       <div id="sorti-element">
-        <p>Изначальный массив: </p>
-        <p>{izn}</p>
-        <p>Сортированный массив: </p>
-        <p>{sort}</p>
+        <p className="mas">Изначальный массив: </p>
+        <p className="viv">{izn}</p>
+        <p className="mas">Сортированный массив: </p>
+        <p className="viv">{sort}</p>
       </div>
     </sorti>
   );
