@@ -1,5 +1,36 @@
 .container{
-    grid-area: cont;
-    background-color: rgb(40, 0, 41);
-    border:2px solid black;
+    width: 420px;
+    height: auto;;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border-radius: 5px;
+    margin-top: 5px;
+    word-break: break-all;
+}.user{
+   justify-self: start; 
+   background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border: none;
+    color: white;
+padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 16px;
+}.message{
+    justify-self: start; 
+}.addPost{
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border: none;
+    color: white;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 16px;
+}.inp{
+    font-size:15px;
+    font-weight:bold;
+  color:rgb(40, 0, 41);
+  border-radius: 10px;
 }

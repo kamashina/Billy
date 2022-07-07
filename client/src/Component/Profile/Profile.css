@@ -2,12 +2,21 @@
     grid-area: prof;
     margin-left: auto;
     margin-right: auto;
-    width: 6em
+    justify-self: center;
 }
 .profile img {
     width: 100px; 
     height: 100px; 
     object-fit: cover;
     border-radius: 50px;
-    
+}.but{
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 16px;
 }

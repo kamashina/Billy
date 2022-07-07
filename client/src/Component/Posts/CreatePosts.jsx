@@ -28,6 +28,7 @@ function CreatePosts() {
         onChange={(event) => setText(event.target.value)}
         placeholder="Сообщение"
         value={text}
+        className="inp"
       />
       <button type="button" className="addPost" onClick={addPost}>Опубликовать</button>
       <Posts posts={red.Dialog} />

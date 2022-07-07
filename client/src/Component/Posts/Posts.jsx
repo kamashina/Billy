@@ -3,11 +3,11 @@ import './Posts.css';
 
 function Posts({ posts }) {
   return (
-    <div>
+    <div className="container">
       {posts.map(({ value, user }, idx) => (
         <div key={idx} className="container">
-          <Link to="/Profile"><div>{user}</div></Link>
-          <div>{value}</div>
+          <Link className="user" to="/Profile"><div>{user}</div></Link>
+          <div className="message">{value}</div>
         </div>
       ))}
     </div>
