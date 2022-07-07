@@ -5,7 +5,7 @@ function Posts({ posts }) {
   return (
     <div>
       {posts.map(({ value, user }, idx) => (
-        <div key={idx} className="container">
+        <div key={idx} className="bubble">
           <Link className="user" to="/Profile"><div>{user}</div></Link>
           <div className="message">{value}</div>
         </div>
