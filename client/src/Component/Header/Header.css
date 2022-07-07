@@ -6,7 +6,7 @@
     grid-template-rows: auto ;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "i main login"
+    "i main login logout"
 }
 .header img{
     grid-area: i;
@@ -29,6 +29,11 @@
     font-size: 200%;
 }
 .login{
+    color: white;
+    align-self: right;
+    justify-self: right;
+}
+.logout{
     color: white;
     align-self: right;
     justify-self: right;

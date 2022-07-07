@@ -20,6 +20,7 @@ function Login() {
       .then((response) => {
         localStorage.setItem('token', response.data.token);
         dispatch(setAuth(true));
+        localStorage.setItem('authstatus', true);
       });
   };
   return (

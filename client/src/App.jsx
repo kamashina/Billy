@@ -14,13 +14,11 @@ import Showcase from './Component/Product/Showcase';
 import Auth from './Component/Auth/Auth';
 import { setUser } from './store/Reduxauth/login/action';
 import Header from './Component/Header/Header';
-import Login from './Component/Auth/login/Login';
-import Reg from './Component/Auth/reg/Reg';
 
 function App() {
   const dispatch = useDispatch();
   const fsfk = useSelector((state) => state.authorization.auth);
-  const token = (localStorage.getItem('token'));
+  const token = localStorage.getItem('token');
   useEffect(() => {
     const userData = () => {
       instance.get('/auth/me', {
@@ -36,10 +34,6 @@ function App() {
     return (
       <div>
         <Auth />
-        <Routes>
-          <Route path="client/src/Component/Auth/login/Login.jsx" element={<Login />} />
-          <Route path="client/src/Component/Auth/reg/Reg.jsx" element={<Reg />} />
-        </Routes>
       </div>
     );
   }
