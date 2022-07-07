@@ -18,7 +18,7 @@ function Header() {
     <header className="header">
       <img src={logo} alt={logo} />
       <Navbar />
-      <span className="main">Проект №12</span>
+      <span className="main">Проект №123</span>
       {fsfk
         ? (
           <div className="group">
