@@ -10,7 +10,7 @@ grid-template-areas:
 }
 
 .content{
-   min-height: 1000px;
+   min-height: 800px;
    height: auto;
     grid-area: cont;
     color: white;
