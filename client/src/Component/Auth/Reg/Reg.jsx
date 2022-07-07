@@ -2,7 +2,7 @@ import axios from 'axios';
 import './Reg.css';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../../../store/Reduxauth/login/action';
+import { setAuth } from '../../../store/Reduxauth/login/action';
 
 function Reg() {
   const dispatch = useDispatch();
@@ -19,7 +19,9 @@ function Reg() {
         nickname: nick,
       },
     }).then((response) => {
-      dispatch(setUser(response.data));
+      localStorage.setItem('token', response.data.token);
+      dispatch(setAuth(true));
+      localStorage.setItem('authstatus', true);
     })
       .catch((error) => console.log(error));
   };
