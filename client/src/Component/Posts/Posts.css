@@ -18,6 +18,7 @@ padding: 6px;
     font-size: 16px;
 }.message{
     justify-self: start; 
+    font-size: 1.6rem;
 }.addPost{
     background-image: linear-gradient(to left, #553c9a, #b393d3);
     border: none;

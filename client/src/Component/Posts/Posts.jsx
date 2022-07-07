@@ -3,7 +3,7 @@ import './Posts.css';
 
 function Posts({ posts }) {
   return (
-    <div className="container">
+    <div>
       {posts.map(({ value, user }, idx) => (
         <div key={idx} className="container">
           <Link className="user" to="/Profile"><div>{user}</div></Link>
