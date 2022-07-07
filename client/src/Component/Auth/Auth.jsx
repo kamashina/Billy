@@ -10,8 +10,8 @@ function Auth() {
       <Header />
       <div className="container">
         <Routes>
-          <Route path="client/src/Component/Auth/login/Login.jsx" element={<Login />} />
-          <Route path="client/src/Component/Auth/reg/Reg.jsx" element={<Reg />} />
+          <Route path="client/src/Component/Auth/login/Login.jsx" element={<Login className="login" />} />
+          <Route path="client/src/Component/Auth/reg/Reg.jsx" element={<Reg className="reg" />} />
         </Routes>
       </div>
     </div>

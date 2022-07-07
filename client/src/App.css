@@ -1,21 +1,22 @@
 .singlepage-wrapper{
    display: grid;
-grid-template-rows: auto 1fr;
-grid-template-columns: 230px 10fr;
+grid-template-rows: 1fr;
+grid-template-columns: 1fr;
 grid-template-areas: 
-"h h"
-"nav cont"
-"footer footer"
+"h"
+"cont"
+"footer"
 ;
 }
 
 .content{
-   min-height: 600px;
+   min-height: 1000px;
    height: auto;
     grid-area: cont;
-    background: rgb(0, 0, 0);
     color: white;
     padding: 1em;
+    justify-self: center;
+    margin-top: 40px;
     }
 html
     {

@@ -1,40 +1,43 @@
 .header{
     display: grid;
     grid-area: h;
-    background: rgb(40, 0, 41);
-    padding: 1em;
-    grid-template-rows: auto ;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "i main login logout"
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: 
+"im main nav lo out" ;
 }
 .header img{
-    grid-area: i;
+    grid-area: 1;
     width: 100px;
-    grid-column: 1;
-}
-.header h1{
-    grid-area: h1;
-    grid-column: 2;
-    color: white;
-    min-height: 1em;
-    display: table-cell;
-    vertical-align: middle;
-    align-self: center;
-    justify-self: center;
+    margin-top: 10px;
 }
 .main{
     grid-area: main;
     color: white;
+    margin-top: 10px;
     font-size: 200%;
+    justify-self: center;
 }
-.login{
+.log{
     color: white;
-    align-self: right;
-    justify-self: right;
+    padding: 10px;
+    grid-area: lo;
+    background-image: linear-gradient(to right, #553c9a, #b393d3);
+        border: none;
+        color: white;
+        margin-top: 230px;
+        text-align: center;
+        text-decoration: none;
+
 }
 .logout{
     color: white;
-    align-self: right;
-    justify-self: right;
+    padding: 10px;
+      grid-area: out;
+background-image: linear-gradient(to right, #553c9a, #b393d3);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
 }

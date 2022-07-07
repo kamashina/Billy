@@ -24,22 +24,27 @@ function Login() {
       });
   };
   return (
-
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input
+      <login className="login">
+        <h1 className="mess">Вход</h1>
+        <input
         // eslint-disable-next-line react/jsx-props-no-spreading
-        {...register('email')}
-        placeholder="Почта"
-      />
-      <input
+          {...register('email')}
+          placeholder="Почта"
+          className="inp1"
+        />
+        <input
         // eslint-disable-next-line react/jsx-props-no-spreading
-        {...register('password')}
-        placeholder="Пароль"
-        type="password"
-      />
-      <input
-        type="submit"
-      />
+          {...register('password')}
+          placeholder="Пароль"
+          type="password"
+          className="inp2"
+        />
+        <input
+          type="submit"
+          className="inpsub"
+        />
+      </login>
     </form>
   );
 }

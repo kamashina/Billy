@@ -25,9 +25,10 @@ function Reg() {
   };
   return (
     <reg className="Reg">
-      <input className="name" type="text" onChange={(event) => setPochta(event.target.value)} placeholder="Почта" />
+      <h1 className="mess">Регистрация</h1>
+      <input className="email" type="text" onChange={(event) => setPochta(event.target.value)} placeholder="Почта" />
+      <input className="nick" type="text" onChange={(event) => setNick(event.target.value)} placeholder="Ник" />
       <input className="pass" type="password" onChange={(event) => setPass(event.target.value)} placeholder="Пароль" />
-      <input className="country" type="text" onChange={(event) => setNick(event.target.value)} placeholder="Ник" />
       <p className="err">{Error}</p>
       <button type="button" className="registr" onClick={Pass}>Войти</button>
     </reg>

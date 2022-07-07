@@ -5,7 +5,6 @@ import instance from './axios';
 import Sorti from './Component/Sorti/Sorti';
 import Readfile from './Component/Readfile/Readfile';
 import Main from './Component/Main/Main';
-import Navbar from './Component/Navbar/Navbar';
 import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
@@ -41,7 +40,6 @@ function App() {
     <div>
       <div className="singlepage-wrapper">
         <Header />
-        <Navbar />
         <div className="content">
           <Routes>
             <Route path="/Profile" element={<Profile />} />

@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 import './Header.css';
 
 function Header() {
@@ -10,15 +11,20 @@ function Header() {
   return (
     <header className="header">
       <img src={logo} alt={logo} />
+      <span className="main">Проект №1</span>
       {fsfk
-        ? <NavLink className="logout" to="/Profile">{email}</NavLink>
+        ? (
+          <div>
+            <NavLink className="log" to="/Profile">{email}</NavLink>
+            <Navbar />
+          </div>
+        )
         : (
           <div>
-            <NavLink to="client/src/Component/Auth/reg/Reg.jsx">Регистрация</NavLink>
-            <NavLink className="login" to="client/src/Component/Auth/login/Login.jsx">Вход</NavLink>
+            <NavLink className="logout" to="client/src/Component/Auth/reg/Reg.jsx">Регистрация</NavLink>
+            <NavLink className="log" to="client/src/Component/Auth/login/Login.jsx">Вход</NavLink>
           </div>
         )}
-      <span className="main">Проект №1</span>
     </header>
   );
 } export default Header;

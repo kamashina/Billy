@@ -4,13 +4,17 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="nav">
-      <NavLink to="/"><div>Главное</div></NavLink>
-      <NavLink to="/Profile"><div>Профиль</div></NavLink>
-      <NavLink to="/Readfile"><div>Загрузка</div></NavLink>
-      <NavLink to="/sorti"><div>Сортировка</div></NavLink>
-      <NavLink to="/Posts"><div>Посты</div></NavLink>
-      <NavLink to="/Product"><div>Товары</div></NavLink>
-
+      <div className="dropdown">
+        <button type="button" className="dropbtn">Меню</button>
+        <div className="dropdown-content">
+          <NavLink to="/">Главное</NavLink>
+          <NavLink to="/Profile">Профиль</NavLink>
+          <NavLink to="/Readfile">Загрузка</NavLink>
+          <NavLink to="/sorti">Сортировка</NavLink>
+          <NavLink to="/Posts">Посты</NavLink>
+          <NavLink to="/Product">Товары</NavLink>
+        </div>
+      </div>
     </nav>
   );
 } export default Navbar;
