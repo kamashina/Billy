@@ -14,7 +14,7 @@ function CreatePosts() {
         setPost(responce.data);
       });
     }
-    post();
+    setInterval(post(), 500);
   }, []);
 
   function addPost() {
