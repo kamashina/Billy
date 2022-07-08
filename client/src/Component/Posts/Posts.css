@@ -1,7 +1,9 @@
 .bubble{
     position: relative;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-image: linear-gradient(to right, #553c9a, #b393d3);
 	border-radius: .4em;
+    word-wrap:break-word;
+max-width: 25em;
 }.bubble:after{
     content: '';
 	position: absolute;
@@ -22,16 +24,17 @@
    justify-self: start; 
     border: none;
     color: white;
+    font-weight: bold;
 padding: 6px;
     text-align: center;
     text-decoration: none;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
     border-radius: 20px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
 }.message{
     justify-self: start; 
-    font-size: 1.6rem;
+    margin-left: 1em;
+    font-size: 1rem;
 }.addPost{
     background-image: linear-gradient(to left, #553c9a, #b393d3);
     border: none;
@@ -47,4 +50,11 @@ padding: 6px;
     font-weight:bold;
   color:rgb(40, 0, 41);
   border-radius: 10px;
+}.scroller{
+    overflow-y: scroll;
+    scroll-snap-align: start;
+max-height: 30em;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
 }

@@ -40,7 +40,9 @@ function CreatePosts() {
         className="inp"
       />
       <button type="button" className="addPost" onClick={addPost}>Опубликовать</button>
-      <Posts posts={posts} />
+      <div className="scroller">
+        <Posts posts={posts} />
+      </div>
     </div>
   );
 } export default CreatePosts;
