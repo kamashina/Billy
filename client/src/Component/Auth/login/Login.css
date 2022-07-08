@@ -1,9 +1,11 @@
 .login{
     display: grid;
     grid-area: login;
-    margin-top: 40px;
+    margin-top: 80px;
     gap:10px;
     width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   height: 280px;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
   border-radius: 20px;

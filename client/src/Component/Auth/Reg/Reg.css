@@ -1,9 +1,11 @@
 .Reg{
 display: grid;
 grid-area: regi;
-margin-top: 40px;
+margin-top: 80px;
 width: 420px;
-  height: 400px;
+margin-left: auto;
+margin-right: auto;
+  height: 360px;
   border-radius: 20px;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
     gap: 10px;

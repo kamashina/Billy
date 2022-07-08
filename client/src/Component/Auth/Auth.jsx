@@ -8,12 +8,10 @@ function Auth() {
   return (
     <div>
       <Header />
-      <div className="container">
-        <Routes>
-          <Route path="client/src/Component/Auth/login/Login.jsx" element={<Login className="login" />} />
-          <Route path="client/src/Component/Auth/reg/Reg.jsx" element={<Reg className="reg" />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="client/src/Component/Auth/login/Login.jsx" element={<Login className="login" />} />
+        <Route path="client/src/Component/Auth/reg/Reg.jsx" element={<Reg className="reg" />} />
+      </Routes>
     </div>
   );
 } export default Auth;
