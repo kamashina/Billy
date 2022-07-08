@@ -18,7 +18,7 @@ function CreatePosts() {
   }, []);
 
   function addPost() {
-    instance.post('posts/addpost', {
+    instance.post('/posts/addpost', {
       nickname: nick,
       value: text,
     }).then((responce) => {
