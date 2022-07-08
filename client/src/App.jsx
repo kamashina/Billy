@@ -29,29 +29,31 @@ function App() {
     };
     userData();
   }, [fsfk]);
-  if (!token) {
-    return (
-      <div>
-        <Auth />
-      </div>
-    );
-  }
   return (
     <div>
-      <div className="singlepage-wrapper">
-        <Header />
-        <div className="content">
-          <Routes>
-            <Route path="/Profile" element={<Profile />} />
-            <Route path="/Readfile" element={<Readfile />} />
-            <Route path="/Sorti" element={<Sorti />} />
-            <Route path="/" element={<Main />} />
-            <Route path="/Posts" element={<CreatePosts />} />
-            <Route path="/Product" element={<Showcase />} />
-          </Routes>
+      {(!token) ? (
+        <div>
+          <Auth />
         </div>
-        <Footer />
-      </div>
+      )
+        : (
+          <div>
+            <div className="singlepage-wrapper">
+              <Header />
+              <div className="content">
+                <Routes>
+                  <Route path="/Profile" element={<Profile />} />
+                  <Route path="/Readfile" element={<Readfile />} />
+                  <Route path="/Sorti" element={<Sorti />} />
+                  <Route path="/" element={<Main />} />
+                  <Route path="/Posts" element={<CreatePosts />} />
+                  <Route path="/Product" element={<Showcase />} />
+                </Routes>
+              </div>
+              <Footer />
+            </div>
+          </div>
+        )}
     </div>
   );
 } export default App;

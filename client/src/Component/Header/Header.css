@@ -2,21 +2,22 @@
     display: grid;
     grid-area: h;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
-  grid-template-columns:100px 1fr auto;
-  grid-template-areas: 
-"im main nav out lo btn" ;
+  grid-template-columns: repeat(5, 1fr);
 }
 .header img{
-    grid-area: 1;
+    grid-area: img;
+    grid-row-start: 1;
+    grid-column-start: 1;
     width: 100px;
     margin-top: 10px;
 }
 .main{
     grid-area: main;
     color: white;
-    margin-top: 10px;
     font-size: 200%;
-    justify-self: center;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    margin-top: 30px;
 }
 .log{
     color: white;
@@ -25,7 +26,6 @@
     background-image: linear-gradient(to right, #553c9a, #b393d3);
         border: none;
         color: white;
-        margin-top: 230px;
         text-align: center;
         text-decoration: none;
 
@@ -50,4 +50,14 @@ background-image: linear-gradient(to right, #553c9a, #b393d3);
     color: white;
     text-align: center;
     text-decoration: none;
+}.one{
+grid-area:menu;
+grid-column-start: 1;
+grid-row-start: 1;
+margin-top: 89px;
+margin-right: 300px;
+}.group{
+    margin-left: 200px;
+    grid-column-start: 5;
+    grid-row-start: 1;
 }

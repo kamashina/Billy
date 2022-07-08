@@ -17,7 +17,9 @@ function Header() {
   return (
     <header className="header">
       <img src={logo} alt={logo} />
-      <Navbar />
+      <div className="one">
+        <Navbar />
+      </div>
       <span className="main">Проект №1</span>
       {fsfk
         ? (
@@ -27,7 +29,7 @@ function Header() {
           </div>
         )
         : (
-          <div>
+          <div className="group">
             <NavLink className="logout" to="client/src/Component/Auth/reg/Reg.jsx">Регистрация</NavLink>
             <NavLink className="log" to="client/src/Component/Auth/login/Login.jsx">Вход</NavLink>
           </div>

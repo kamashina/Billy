@@ -3,6 +3,7 @@
     }.container{
         background-image: linear-gradient(to left, #553c9a, #b393d3);
         border: none;
+        margin-top: 5%;
         color: white;
         padding: 50px 100px;
         text-align: center;
