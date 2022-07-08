@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Posts from './Posts';
 import './Posts.css';
@@ -9,12 +9,13 @@ function CreatePosts() {
   const [posts, setPost] = useState([]);
   const nick = useSelector((state) => state.authorization.data.nickname);
 
-  setInterval(() => {
-    instance.get('/posts/get').then((responce) => {
-      setPost(responce.data);
-    });
-  }, 1000);
-
+  useEffect(() => {
+    setInterval(() => {
+      instance.get('/posts/get').then((responce) => {
+        setPost(responce.data);
+      });
+    }, 1000);
+  }, []);
   function addPost() {
     instance.post('/posts/addpost', {
       nickname: nick,
