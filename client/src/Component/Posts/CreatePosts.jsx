@@ -13,7 +13,7 @@ function CreatePosts() {
     instance.get('/posts/get').then((responce) => {
       setPost(responce.data);
     });
-  }, 3000);
+  }, 1000);
 
   function addPost() {
     instance.post('/posts/addpost', {
