@@ -4,6 +4,7 @@ import { regiValidation } from './validations/Reg.js'
 import checkAuth from './utils/checkAuth.js'
 import cors from 'cors'
 import * as UserController from './controllers/UserController.js'
+import * as PostsController from './controllers/PostsController.js'
 
 mongoose
   .connect('mongodb+srv://admin:12345@cluster0.f3hdq.mongodb.net/blog?retryWrites=true&w=majority')
@@ -19,6 +20,10 @@ app.post('/auth/login', UserController.login)
 app.post('/auth/register',regiValidation, UserController.register)
 
 app.get('/auth/me', checkAuth, UserController.getMe)
+
+app.post('/posts/addpost', PostsController.addPost)
+
+app.get('/posts/get', PostsController.getPost)
 
 app.listen(1983, (err) => {
   if (err) {

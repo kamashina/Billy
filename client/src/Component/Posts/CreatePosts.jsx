@@ -1,27 +1,36 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setPostText } from '../../store/Dialogs/action';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import Posts from './Posts';
 import './Posts.css';
+import instance from '../../axios';
 
 function CreatePosts() {
   const [text, setText] = useState();
   const [posts, setPost] = useState([]);
   const nick = useSelector((state) => state.authorization.data.nickname);
-  // eslint-disable-next-line no-underscore-dangle
-  const ID = useSelector((state) => state.authorization.data._id);
-  const red = useSelector((state) => state.Dialogs);
-  const dispatch = useDispatch();
+  useEffect(() => {
+    async function post() {
+      await instance.get('/posts/get').then((responce) => {
+        setPost(responce.data);
+      });
+    }
+    post();
+  }, []);
+
   function addPost() {
-    const newPost = {
-      id: ID,
+    instance.post('posts/addpost', {
+      nickname: nick,
       value: text,
-      user: nick,
-    };
-    setPost([...posts, newPost]);
+    }).then((responce) => {
+      const newPost = {
+        nickname: responce.data.nickname,
+        value: responce.data.value,
+      };
+      setPost([...posts, newPost]);
+    });
     setText('');
-    dispatch(setPostText([...posts, newPost]));
   }
+
   return (
     <div>
       <input
@@ -31,7 +40,7 @@ function CreatePosts() {
         className="inp"
       />
       <button type="button" className="addPost" onClick={addPost}>Опубликовать</button>
-      <Posts posts={red.Dialog} />
+      <Posts posts={posts} />
     </div>
   );
 } export default CreatePosts;

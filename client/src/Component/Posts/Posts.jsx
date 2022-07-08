@@ -4,9 +4,9 @@ import './Posts.css';
 function Posts({ posts }) {
   return (
     <div>
-      {posts.map(({ value, user }, idx) => (
+      {posts.map(({ value, nickname }, idx) => (
         <div key={idx} className="bubble">
-          <Link className="user" to="/Profile"><div>{user}</div></Link>
+          <Link className="user" to="/Profile"><div>{nickname}</div></Link>
           <div className="message">{value}</div>
         </div>
       ))}

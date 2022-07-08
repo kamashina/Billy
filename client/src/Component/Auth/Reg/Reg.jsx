@@ -10,19 +10,16 @@ function Reg() {
   const [nick, setNick] = useState();
   const [pochta, setPochta] = useState();
   const Pass = () => {
-    instance({
-      method: 'POST',
-      url: '/auth/register',
-      data: {
-        email: pochta,
-        password: passw,
-        nickname: nick,
-      },
-    }).then((response) => {
-      localStorage.setItem('token', response.data.token);
-      dispatch(setAuth(true));
-      localStorage.setItem('authstatus', true);
+    instance.post('/auth/register', {
+      email: pochta,
+      password: passw,
+      nickname: nick,
     })
+      .then((response) => {
+        localStorage.setItem('token', response.data.token);
+        dispatch(setAuth(true));
+        localStorage.setItem('authstatus', true);
+      })
       .catch((error) => console.log(error));
   };
   return (
