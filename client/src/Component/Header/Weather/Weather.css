@@ -1,0 +1,48 @@
+.weathercont{
+    display: grid;
+    grid-template-rows: 9em;
+    grid-template-columns: 5em 1fr;
+    width: 25em; 
+
+}.logo{
+grid-column-start: 1;
+grid-row-start: 1;
+width: 5em;
+height: 5em;
+}.city{
+    color: white;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-left: 6em;
+    font-size: 80%;
+    margin-top: 2em;
+}.time{
+    color: white;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-size: 80%;
+    margin-top: 6em;
+    margin-right: 3em ;
+}.temp{
+    color: white;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-size: 200%;
+    margin-top: 1em;
+}.humidity{
+    color: white;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-top: 3em ;
+    margin-left: 2em;
+    font-size: 80%;
+    margin-left: 6em;
+}.wind{
+color: white;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-top: 4em ;
+    margin-left: 2em;
+    font-size: 80%;
+    margin-left: 6em;
+}

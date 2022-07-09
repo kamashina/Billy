@@ -10,8 +10,8 @@ function CreatePosts() {
   const nick = useSelector((state) => state.authorization.data.nickname);
 
   useEffect(() => {
-    setInterval(() => {
-      instance.get('/posts/get').then((responce) => {
+    setInterval(async () => {
+      await instance.get('/posts/get').then((responce) => {
         setPost(responce.data);
       });
     }, 1000);
@@ -20,12 +20,6 @@ function CreatePosts() {
     instance.post('/posts/addpost', {
       nickname: nick,
       value: text,
-    }).then((responce) => {
-      const newPost = {
-        nickname: responce.data.nickname,
-        value: responce.data.value,
-      };
-      setPost([...posts, newPost]);
     });
     setText('');
   }

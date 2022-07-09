@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { setAuth } from '../../store/Reduxauth/login/action';
 import Navbar from '../Navbar/Navbar';
 import './Header.css';
+import Weather from './Weather/Weather';
 
 function Header() {
   const dispatch = useDispatch();
@@ -21,6 +22,9 @@ function Header() {
         <Navbar />
       </div>
       <span className="main">Проект №1</span>
+      <div className="weather">
+        <Weather />
+      </div>
       {fsfk
         ? (
           <div className="group">
