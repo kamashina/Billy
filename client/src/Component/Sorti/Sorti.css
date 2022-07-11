@@ -26,4 +26,12 @@
         padding: 10px 20px;
         border-radius: 20px;
         font-size: 14px;
+    }.cont{
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+        border: none;
+        margin-top: 5%;
+        padding: 50px 100px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 20px;
     }

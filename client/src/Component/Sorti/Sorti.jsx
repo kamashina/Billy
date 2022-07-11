@@ -53,18 +53,20 @@ function Sorti() {
   }
   return (
     <sorti className="Sorti">
-      <div>
-        <input type="text" placeholder="Через пробел..." onChange={(event) => setValue(event.target.value)} />
-      </div>
-      <div>
-        <line className="btn" onClick={clearState}>Очистить</line>
-        <line className="btn" onClick={Withconsole}>Отсортировать</line>
-      </div>
-      <div id="sorti-element">
-        <p className="mas">Изначальный массив: </p>
-        <p className="viv">{izn}</p>
-        <p className="mas">Сортированный массив: </p>
-        <p className="viv">{sort}</p>
+      <div className="cont">
+        <div>
+          <input type="text" placeholder="Через пробел..." onChange={(event) => setValue(event.target.value)} />
+        </div>
+        <div>
+          <line className="btn" onClick={clearState}>Очистить</line>
+          <line className="btn" onClick={Withconsole}>Отсортировать</line>
+        </div>
+        <div id="sorti-element">
+          <p className="mas">Изначальный массив: </p>
+          <p className="viv">{izn}</p>
+          <p className="mas">Сортированный массив: </p>
+          <p className="viv">{sort}</p>
+        </div>
       </div>
     </sorti>
   );

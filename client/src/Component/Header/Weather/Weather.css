@@ -9,6 +9,7 @@ grid-column-start: 1;
 grid-row-start: 1;
 width: 5em;
 height: 5em;
+margin-left: 0.6em;
 }.city{
     color: white;
     grid-column-start: 2;
@@ -28,7 +29,7 @@ height: 5em;
     grid-column-start: 2;
     grid-row-start: 1;
     font-size: 200%;
-    margin-top: 1em;
+margin-left: 0.5em;
 }.humidity{
     color: white;
     grid-column-start: 2;

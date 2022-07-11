@@ -13,20 +13,22 @@ function Profile() {
   };
   return (
     <profile className="profile">
-      <h1>
-        Профиль
-        {' '}
-        {email}
-      </h1>
-      <p>Данные аккаунта:</p>
-      <ul>
-        Почта:
-        {email}
-      </ul>
-      <ul>
-        Ник:
-        {nick}
-      </ul>
+      <div className="prof">
+        <h1>
+          Профиль
+          {' '}
+          {email}
+        </h1>
+        <p>Данные аккаунта:</p>
+        <ul>
+          Почта:
+          {email}
+        </ul>
+        <ul>
+          Ник:
+          {nick}
+        </ul>
+      </div>
       <button type="button" className="but" onClick={Logout}>
         Выход
       </button>
