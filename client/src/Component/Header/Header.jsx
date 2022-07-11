@@ -16,7 +16,7 @@ function Header() {
     dispatch(setAuth('false'));
   };
   return (
-    <header className="header">
+    <div className="header">
       <img src={logo} alt={logo} />
       <div className="one">
         <Navbar />
@@ -38,6 +38,6 @@ function Header() {
             <NavLink className="log" to="client/src/Component/Auth/login/Login.jsx">Вход</NavLink>
           </div>
         )}
-    </header>
+    </div>
   );
 } export default Header;

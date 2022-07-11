@@ -2,7 +2,7 @@ import './Main.css';
 
 function Main() {
   return (
-    <main>
+    <div>
       <div className="container">
         <h1>Резюме</h1>
         <span className="rez">
@@ -18,6 +18,6 @@ function Main() {
           продвижения, готов уделять на это максимум времени и сил. Зп не важно.
         </span>
       </div>
-    </main>
+    </div>
   );
 } export default Main;

@@ -23,12 +23,12 @@ function Reg() {
       .catch((error) => console.log(error));
   };
   return (
-    <reg className="Reg">
+    <div className="Reg">
       <h1 className="mess">Регистрация</h1>
       <input className="email" type="text" onChange={(event) => setPochta(event.target.value)} placeholder="Почта" />
       <input className="nick" type="text" onChange={(event) => setNick(event.target.value)} placeholder="Ник" />
       <input className="pass" type="password" onChange={(event) => setPass(event.target.value)} placeholder="Пароль" />
       <button type="button" className="registr" onClick={Pass}>Зарегистрироваться</button>
-    </reg>
+    </div>
   );
 } export default Reg;

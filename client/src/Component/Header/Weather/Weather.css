@@ -7,7 +7,7 @@
 }.logo{
 grid-column-start: 1;
 grid-row-start: 1;
-width: 5em;
+width: 4em;
 height: 5em;
 margin-left: 0.6em;
 }.city{
@@ -29,7 +29,7 @@ margin-left: 0.6em;
     grid-column-start: 2;
     grid-row-start: 1;
     font-size: 200%;
-margin-left: 0.5em;
+margin-left: 0.8em;
 }.humidity{
     color: white;
     grid-column-start: 2;

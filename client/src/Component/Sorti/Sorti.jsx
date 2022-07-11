@@ -52,14 +52,14 @@ function Sorti() {
     setIzn();
   }
   return (
-    <sorti className="Sorti">
+    <div className="Sorti">
       <div className="cont">
         <div>
           <input type="text" placeholder="Через пробел..." onChange={(event) => setValue(event.target.value)} />
         </div>
         <div>
-          <line className="btn" onClick={clearState}>Очистить</line>
-          <line className="btn" onClick={Withconsole}>Отсортировать</line>
+          <button className="btn" onClick={clearState} type="button">Очистить</button>
+          <button className="btn" onClick={Withconsole} type="button">Отсортировать</button>
         </div>
         <div id="sorti-element">
           <p className="mas">Изначальный массив: </p>
@@ -68,6 +68,6 @@ function Sorti() {
           <p className="viv">{sort}</p>
         </div>
       </div>
-    </sorti>
+    </div>
   );
 } export default Sorti;

@@ -55,7 +55,7 @@ function Readfile() {
     });
   }
   return (
-    <readfile className="readfile">
+    <div className="readfile">
       <div className="upload-container">
         <input type="file" name="file" onChange={(event) => onChange(event)} />
         <p>Загрузить</p>
@@ -73,6 +73,6 @@ function Readfile() {
         </table>
         <button type="button" onClick={click}>Прочитать</button>
       </div>
-    </readfile>
+    </div>
   );
 } export default Readfile;

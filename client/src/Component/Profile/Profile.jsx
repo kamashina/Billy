@@ -12,7 +12,7 @@ function Profile() {
     dispatch(setAuth('false'));
   };
   return (
-    <profile className="profile">
+    <div className="profile">
       <div className="prof">
         <h1>
           Профиль
@@ -32,6 +32,6 @@ function Profile() {
       <button type="button" className="but" onClick={Logout}>
         Выход
       </button>
-    </profile>
+    </div>
   );
 } export default Profile;

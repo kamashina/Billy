@@ -2,7 +2,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <div className="footer">
 
       <p>Создатель: Kamashina</p>
 
@@ -10,6 +10,6 @@ function Footer() {
       <p />
       <a href="https://github.com/kamashina/Billy">Ссылка на гитхаб</a>
 
-    </footer>
+    </div>
   );
 } export default Footer;

@@ -1,6 +1,6 @@
 .singlepage-wrapper{
    display: grid;
-grid-template-rows: 145px auto 145px;
+grid-template-rows: 145px auto auto;
 grid-template-columns: 1fr;
 grid-template-areas: 
 "h"
@@ -12,7 +12,6 @@ grid-template-areas:
 .content{
    min-height: 800px;
    height: auto;
-    grid-area: cont;
     color: white;
     padding: 1em;
     justify-self: center;

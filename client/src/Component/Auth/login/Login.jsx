@@ -25,7 +25,7 @@ function Login() {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <login className="login">
+      <div className="login">
         <h1 className="mess">Вход</h1>
         <input
         // eslint-disable-next-line react/jsx-props-no-spreading
@@ -44,7 +44,7 @@ function Login() {
           type="submit"
           className="inpsub"
         />
-      </login>
+      </div>
     </form>
   );
 }

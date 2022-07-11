@@ -7,7 +7,7 @@ function Navbar() {
     <div>
       {(fsfk) ? (
         <div>
-          <nav className="nav">
+          <div className="nav">
             <div className="dropdown">
               <button type="button" className="dropbtn">Меню</button>
               <div className="dropdown-content">
@@ -19,7 +19,7 @@ function Navbar() {
                 <NavLink to="/Product">Товары</NavLink>
               </div>
             </div>
-          </nav>
+          </div>
         </div>
       ) : null}
     </div>
