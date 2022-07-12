@@ -14,7 +14,10 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true // обязательность заполнения
   },
-  avatar: String
+  avatarUrl:{
+  type: String,
+  required: true // обязательность заполнения
+  }
 },
 {
   timestamps: true

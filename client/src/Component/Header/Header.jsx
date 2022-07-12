@@ -8,7 +8,8 @@ import Weather from './Weather/Weather';
 function Header() {
   const dispatch = useDispatch();
   const email = useSelector((state) => state.authorization.data.email);
-  const logo = 'sun.png';
+  const avatar = useSelector((state) => state.authorization.data.avatarUrl);
+  const logo = 'http://localhost:1983/uploads/sun.png';
   const fsfk = JSON.parse(localStorage.getItem('authstatus'));
   const Logout = () => {
     localStorage.removeItem('token');
@@ -17,7 +18,7 @@ function Header() {
   };
   return (
     <div className="header">
-      <img src={logo} alt={logo} />
+      <img className="logo" src={logo} alt={logo} />
       <div className="one">
         <Navbar />
       </div>
@@ -28,6 +29,11 @@ function Header() {
       {fsfk
         ? (
           <div className="group">
+            <img
+              src={avatar}
+              alt="ava"
+              className="ava"
+            />
             <NavLink className="log" to="/Profile">{email}</NavLink>
             <button type="button" onClick={Logout} className="logbtn">Выйти</button>
           </div>

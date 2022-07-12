@@ -1,34 +1,80 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import './Reg.css';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setAuth } from '../../../store/Reduxauth/login/action';
+import { useForm } from 'react-hook-form';
+import { setAuth, setUser } from '../../../store/Reduxauth/login/action';
 import instance from '../../../axios';
 
 function Reg() {
+  const {
+    register,
+    handleSubmit,
+  } = useForm();
+
   const dispatch = useDispatch();
-  const [passw, setPass] = useState();
-  const [nick, setNick] = useState();
-  const [pochta, setPochta] = useState();
-  const Pass = () => {
-    instance.post('/auth/register', {
-      email: pochta,
-      password: passw,
-      nickname: nick,
-    })
+  const [ava, setAva] = useState('http://localhost:1983/uploads/KSeclybJMGg.jpg');
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+    const { data } = await instance.post('/uploads', formData);
+    try {
+      setAva(`http://localhost:1983${data.url}`);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(err);
+    }
+  };
+  const onSubmit = (user) => {
+    instance
+      .post('/auth/register', {
+        email: user.pochta,
+        password: user.pass,
+        nickname: user.nick,
+        avatarUrl: ava,
+      })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
-        dispatch(setAuth(true));
+        dispatch(setUser(response.data));
         localStorage.setItem('authstatus', true);
+        dispatch(setAuth(true));
       })
+    // eslint-disable-next-line no-console
       .catch((error) => console.log(error));
   };
   return (
-    <div className="Reg">
-      <h1 className="mess">Регистрация</h1>
-      <input className="email" type="text" onChange={(event) => setPochta(event.target.value)} placeholder="Почта" />
-      <input className="nick" type="text" onChange={(event) => setNick(event.target.value)} placeholder="Ник" />
-      <input className="pass" type="password" onChange={(event) => setPass(event.target.value)} placeholder="Пароль" />
-      <button type="button" className="registr" onClick={Pass}>Зарегистрироваться</button>
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="Reg">
+        <h1 className="mess">Регистрация</h1>
+        <input
+          {...register('pochta')}
+          className="email"
+          type="text"
+          placeholder="Почта"
+        />
+        <input
+          {...register('nick')}
+          className="nick"
+          type="text"
+          placeholder="Ник"
+        />
+        <input
+          {...register('pass')}
+          className="pass"
+          type="password"
+          placeholder="Пароль"
+        />
+        <input
+          onChange={handleFileUpload}
+          className="fileup"
+          type="file"
+        />
+        <input
+          type="submit"
+          className="regisrt"
+        />
+      </div>
+    </form>
   );
 } export default Reg;

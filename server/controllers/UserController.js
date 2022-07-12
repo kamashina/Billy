@@ -19,7 +19,7 @@ export const register = async (req, res) => {    // РЕГИСТРАЦИЯ
         email: req.body.email,
         nickname: req.body.nickname,
         passwordHash: hash,
-        avatar: req.body.avatar,
+        avatarUrl: req.body.avatarUrl,
       })
       const user = await doc.save()
   const token = jwt.sign({

@@ -3,7 +3,12 @@ import {
 } from './action';
 
 export const UsersState = {
-  data: {},
+  data: {
+    email: '',
+    password: '',
+    nickname: '',
+    avatarUrl: 'http://localhost:1983/uploads/KSeclybJMGg.jpg',
+  },
   auth: false,
 };
 

@@ -29,9 +29,19 @@ border-radius: 10px;
 font-size:20px;
 font-weight:bold;
 color:rgb(40, 0, 41);
-}.registr{
+}.regisrt{
     grid-area: 5;
     background-image: linear-gradient(to left, #553c9a, #b393d3);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 16px;
+}.fileup{
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
     border: none;
     color: white;
     padding: 15px 32px;

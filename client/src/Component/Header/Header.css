@@ -2,14 +2,16 @@
     display: grid;
     grid-area: h;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
-  grid-template-columns: 6em repeat(3, 1fr) 12em;
+  grid-template-columns: 8em repeat(3, 1fr) 12em;
 }
-.header img{
+.logo{
     grid-area: img;
     grid-row-start: 1;
     grid-column-start: 1;
-    width: 100px;
+    width: 10em;
+    height: 100px;
     margin-top: 10px;
+    margin-left: 4em;
 }
 .main{
     grid-area: main;
@@ -60,9 +62,18 @@ margin-right: 300px;
 }.group{
     grid-column-start: 5;
     grid-row-start: 1;
+    margin-top: 1em;
+    margin-left: 0.7em;
 }.weather{
     grid-column-start: 2;
     grid-row-start: 1;
     margin-top: 1em;
     margin-left:3em;
+}.ava{
+    grid-column-start: 5;
+    grid-row-start: 1;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin-left: 8em;
 }

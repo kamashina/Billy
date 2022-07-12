@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import instance from '../../../axios';
-import { setAuth } from '../../../store/Reduxauth/login/action';
+import { setAuth, setUser } from '../../../store/Reduxauth/login/action';
 import './Login.css';
 
 function Login() {
@@ -19,6 +19,7 @@ function Login() {
       })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
+        dispatch(setUser(response.data));
         localStorage.setItem('authstatus', true);
         dispatch(setAuth(true));
       });
