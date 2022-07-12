@@ -7,7 +7,7 @@ export const UsersState = {
     email: '',
     password: '',
     nickname: '',
-    avatarUrl: 'http://localhost:1983/uploads/KSeclybJMGg.jpg',
+    avatarUrl: 'https://server.cum.com.ru/uploads/KSeclybJMGg.jpg',
   },
   auth: false,
 };
