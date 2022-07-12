@@ -9,7 +9,7 @@ function Header() {
   const dispatch = useDispatch();
   const email = useSelector((state) => state.authorization.data.email);
   const avatar = useSelector((state) => state.authorization.data.avatarUrl);
-  const logo = 'https://server.cum.com.ru/uploads/sun.png';
+  const logo = 'http://localhost:1983/uploads/sun.png';
   const fsfk = JSON.parse(localStorage.getItem('authstatus'));
   const Logout = () => {
     localStorage.removeItem('token');

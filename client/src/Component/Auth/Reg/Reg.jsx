@@ -13,14 +13,14 @@ function Reg() {
   } = useForm();
 
   const dispatch = useDispatch();
-  const [ava, setAva] = useState('https://server.cum.com.ru/uploads/KSeclybJMGg.jpg');
+  const [ava, setAva] = useState('http://localhost:1983/uploads/KSeclybJMGg.jpg');
   const handleFileUpload = async (event) => {
     const file = event.target.files[0];
     const formData = new FormData();
     formData.append('image', file);
     const { data } = await instance.post('/uploads', formData);
     try {
-      setAva(`https://server.cum.com.ru${data.url}`);
+      setAva(`http://localhost:1983${data.url}`);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(err);
