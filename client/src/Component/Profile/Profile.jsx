@@ -6,6 +6,7 @@ function Profile() {
   const dispatch = useDispatch();
   const email = useSelector((state) => state.authorization.data.email);
   const nick = useSelector((state) => state.authorization.data.nickname);
+  const avatar = useSelector((state) => state.authorization.data.avatarUrl);
   const Logout = () => {
     localStorage.removeItem('token');
     localStorage.setItem('authstatus', false);
@@ -19,19 +20,26 @@ function Profile() {
           {' '}
           {email}
         </h1>
-        <p>Данные аккаунта:</p>
-        <ul>
-          Почта:
-          {email}
-        </ul>
-        <ul>
-          Ник:
-          {nick}
-        </ul>
+        <img
+          src={avatar}
+          alt="ava"
+          className="avatarka"
+        />
+        <div className="data">
+          <p>Данные аккаунта:</p>
+          <ul>
+            Почта:
+            {email}
+          </ul>
+          <ul>
+            Ник:
+            {nick}
+          </ul>
+          <button type="button" className="but" onClick={Logout}>
+            Выход
+          </button>
+        </div>
       </div>
-      <button type="button" className="but" onClick={Logout}>
-        Выход
-      </button>
     </div>
   );
 } export default Profile;

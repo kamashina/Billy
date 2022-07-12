@@ -4,6 +4,7 @@ grid-area: regi;
 margin-top: 80px;
 width: 420px;
 margin-left: auto;
+box-shadow: 0px 8px 16px 6px rgba(0,0,0,0.2);
 margin-right: auto;
   height: 360px;
   border-radius: 20px;

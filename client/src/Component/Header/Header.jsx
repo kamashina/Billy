@@ -9,7 +9,6 @@ function Header() {
   const dispatch = useDispatch();
   const email = useSelector((state) => state.authorization.data.email);
   const avatar = useSelector((state) => state.authorization.data.avatarUrl);
-  const logo = 'http://localhost:1983/uploads/sun.png';
   const fsfk = JSON.parse(localStorage.getItem('authstatus'));
   const Logout = () => {
     localStorage.removeItem('token');
@@ -18,7 +17,6 @@ function Header() {
   };
   return (
     <div className="header">
-      <img className="logo" src={logo} alt={logo} />
       <div className="one">
         <Navbar />
       </div>

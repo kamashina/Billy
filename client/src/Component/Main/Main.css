@@ -8,6 +8,7 @@
         text-align: center;
         border-radius: 20px;
         font-size: 20px;
+        box-shadow: 0px 8px 16px 6px rgba(0,0,0,0.2);
         
     }.rez{
         overflow-wrap: break-word;  

@@ -3,15 +3,7 @@
     grid-area: h;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
   grid-template-columns: 8em repeat(3, 1fr) 12em;
-}
-.logo{
-    grid-area: img;
-    grid-row-start: 1;
-    grid-column-start: 1;
-    width: 10em;
-    height: 100px;
-    margin-top: 10px;
-    margin-left: 4em;
+  grid-template-rows: 6.5em;
 }
 .main{
     grid-area: main;
@@ -20,7 +12,8 @@
     grid-column-start: 3;
     grid-row-start: 1;
     margin-top: 30px;
-margin-left:2em ;
+margin-left: 2em ;
+grid-row-start: 1;
 }
 .log{
     color: white;
@@ -31,7 +24,7 @@ margin-left:2em ;
         color: white;
         text-align: center;
         text-decoration: none;
-
+        grid-row-start: 1;
 }
 .logout{
     color: white;
@@ -42,6 +35,7 @@ background-image: linear-gradient(to right, #553c9a, #b393d3);
     color: white;
     text-align: center;
     text-decoration: none;
+    grid-row-start: 1;
 }
 
 .logbtn{
@@ -53,22 +47,26 @@ background-image: linear-gradient(to right, #553c9a, #b393d3);
     color: white;
     text-align: center;
     text-decoration: none;
+    grid-row-start: 1;
 }.one{
 grid-area:menu;
 grid-column-start: 1;
 grid-row-start: 1;
-margin-top: 89px;
-margin-right: 300px;
+margin-top: 1em;
+margin-left: 1em;
+grid-row-start: 1;
 }.group{
     grid-column-start: 5;
     grid-row-start: 1;
     margin-top: 1em;
-    margin-left: 0.7em;
+    grid-row-start: 1;
+
 }.weather{
     grid-column-start: 2;
     grid-row-start: 1;
-    margin-top: 1em;
+
     margin-left:3em;
+    grid-row-start: 1;
 }.ava{
     grid-column-start: 5;
     grid-row-start: 1;
@@ -76,4 +74,5 @@ margin-right: 300px;
     height: 3em;
     border-radius: 50%;
     margin-left: 8em;
+    grid-row-start: 1;
 }

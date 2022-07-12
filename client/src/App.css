@@ -1,6 +1,6 @@
 .singlepage-wrapper{
    display: grid;
-grid-template-rows: 145px auto auto;
+grid-template-rows: 6.6em auto auto;
 grid-template-columns: 1fr;
 grid-template-areas: 
 "h"
