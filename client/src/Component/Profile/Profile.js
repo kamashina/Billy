@@ -14,6 +14,7 @@ const Profile = () => {
   };
   return (
     <div className="profile">
+      <title>Профиль</title>
       <div className="prof">
         <h1>
           Профиль

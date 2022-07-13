@@ -25,6 +25,7 @@ const CreatePosts = () => {
 
   return (
     <div>
+      <title>Диалог</title>
       <input
         onChange={(event) => setText(event.target.value)}
         placeholder="Сообщение"

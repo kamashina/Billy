@@ -1,13 +1,14 @@
 import {
   CHANGE_DATA, CHANGE_AUTH,
 } from './action';
+import { API_URL } from '../../../axios';
 
 export const UsersState = {
   data: {
     email: '',
     password: '',
     nickname: '',
-    avatarUrl: 'https://server.cum.com.ru/uploads/KSeclybJMGg.jpg',
+    avatarUrl: `${API_URL}/uploads/KSeclybJMGg.jpg`,
   },
   auth: false,
 };

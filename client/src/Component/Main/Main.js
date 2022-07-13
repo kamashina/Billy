@@ -2,6 +2,7 @@ import './Main.css';
 
 const Main = () => (
   <div>
+    <title>Главное</title>
     <div className="container">
       <h1>Резюме</h1>
       <span className="rez">

@@ -1,6 +1,6 @@
 .weathercont{
     display: grid;
-    grid-template-rows: 9em;
+    grid-template-rows: 6.5em;
     grid-template-columns: 5em 1fr;
     width: 25em; 
 
@@ -10,6 +10,7 @@ grid-row-start: 1;
 width: 4em;
 height: 5em;
 margin-left: 0.6em;
+margin-top: 0.8em;
 }.city{
     color: white;
     grid-column-start: 2;
@@ -23,13 +24,14 @@ margin-left: 0.6em;
     grid-row-start: 1;
     font-size: 80%;
     margin-top: 6em;
-    margin-right: 3em ;
+margin-left: 2em;
 }.temp{
     color: white;
     grid-column-start: 2;
     grid-row-start: 1;
     font-size: 150%;
-margin-left: 0.8em;
+margin-left: 1em;
+margin-top: 1.4em;
 }.humidity{
     color: white;
     grid-column-start: 2;

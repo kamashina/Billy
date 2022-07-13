@@ -20,6 +20,7 @@ const CreateProduct = () => {
   }
   return (
     <div>
+      <title>Товары</title>
       <input
         onChange={(evet) => setName(evet.target.value)}
         placeholder="Введите тип товара"

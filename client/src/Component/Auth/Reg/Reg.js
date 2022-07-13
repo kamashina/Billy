@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { setAuth, setUser } from '../../../store/Reduxauth/login/action';
-import instance from '../../../axios';
+import instance, { API_URL } from '../../../axios';
 
 const Reg = () => {
   const {
@@ -13,14 +13,14 @@ const Reg = () => {
   } = useForm();
 
   const dispatch = useDispatch();
-  const [ava, setAva] = useState('https://server.cum.com.ru/uploads/KSeclybJMGg.jpg');
+  const [ava, setAva] = useState(`${API_URL}/uploads/KSeclybJMGg.jpg`);
   const handleFileUpload = async (event) => {
     const file = event.target.files[0];
     const formData = new FormData();
     formData.append('image', file);
     const { data } = await instance.post('/uploads', formData);
     try {
-      setAva(`https://server.cum.com.ru${data.url}`);
+      setAva(`${API_URL}${data.url}`);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(err);
@@ -45,6 +45,7 @@ const Reg = () => {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <title>Регистрация</title>
       <div className="Reg">
         <h1 className="mess">Регистрация</h1>
         <input

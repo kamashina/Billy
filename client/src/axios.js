@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+export const API_URL = 'https://server.cum.com.ru';
+// export const API_URL = 'http://localhost:1983';
+
 const instance = axios.create({
-  baseURL: 'https://server.cum.com.ru',
-  url: 'https://localhost:1983',
+  baseURL: `${API_URL}`,
 });
 export default instance;

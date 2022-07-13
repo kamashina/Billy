@@ -53,6 +53,7 @@ const Sorti = () => {
   }
   return (
     <div className="Sorti">
+      <title>Сортировка</title>
       <div className="cont">
         <div>
           <input type="text" placeholder="Через пробел..." onChange={(event) => setValue(event.target.value)} />

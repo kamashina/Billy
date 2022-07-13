@@ -56,6 +56,7 @@ const Readfile = () => {
   }
   return (
     <div className="readfile">
+      <title>Загрузка</title>
       <div className="upload-container">
         <input type="file" name="file" onChange={(event) => onChange(event)} />
         <p>Загрузить</p>

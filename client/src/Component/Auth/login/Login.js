@@ -26,6 +26,7 @@ const Login = () => {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <title>Вход</title>
       <div className="login">
         <h1 className="mess">Вход</h1>
         <input
