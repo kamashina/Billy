@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+const Navbar = () => {
   const fsfk = JSON.parse(localStorage.getItem('authstatus'));
   return (
     <div>
@@ -24,4 +24,4 @@ function Navbar() {
       ) : null}
     </div>
   );
-} export default Navbar;
+}; export default Navbar;

@@ -14,7 +14,7 @@ import Auth from './Component/Auth/Auth';
 import { setUser } from './store/Reduxauth/login/action';
 import Header from './Component/Header/Header';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const fsfk = useSelector((state) => state.authorization.auth);
   const token = localStorage.getItem('token');
@@ -56,4 +56,4 @@ function App() {
         )}
     </div>
   );
-} export default App;
+}; export default App;

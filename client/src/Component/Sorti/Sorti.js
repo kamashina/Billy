@@ -1,7 +1,7 @@
 import './Sorti.css';
 import React, { useState } from 'react';
 
-function Sorti() {
+const Sorti = () => {
   let arr = [];
   let arr2 = [];
   const [value, setValue] = useState();
@@ -70,4 +70,4 @@ function Sorti() {
       </div>
     </div>
   );
-} export default Sorti;
+}; export default Sorti;

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAuth } from '../../store/Reduxauth/login/action';
 import './Profile.css';
 
-function Profile() {
+const Profile = () => {
   const dispatch = useDispatch();
   const email = useSelector((state) => state.authorization.data.email);
   const nick = useSelector((state) => state.authorization.data.nickname);
@@ -42,4 +42,4 @@ function Profile() {
       </div>
     </div>
   );
-} export default Profile;
+}; export default Profile;

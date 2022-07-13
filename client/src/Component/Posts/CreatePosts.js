@@ -4,7 +4,7 @@ import Posts from './Posts';
 import './Posts.css';
 import instance from '../../axios';
 
-function CreatePosts() {
+const CreatePosts = () => {
   const [text, setText] = useState();
   const [posts, setPost] = useState([]);
   const nick = useSelector((state) => state.authorization.data.nickname);
@@ -37,4 +37,4 @@ function CreatePosts() {
       </div>
     </div>
   );
-} export default CreatePosts;
+}; export default CreatePosts;

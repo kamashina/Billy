@@ -4,7 +4,7 @@ import instance from '../../../axios';
 import { setAuth, setUser } from '../../../store/Reduxauth/login/action';
 import './Login.css';
 
-function Login() {
+const Login = () => {
   const dispatch = useDispatch();
   const {
     register,
@@ -48,6 +48,6 @@ function Login() {
       </div>
     </form>
   );
-}
+};
 
 export default Login;

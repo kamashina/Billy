@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import './Header.css';
 import Weather from './Weather/Weather';
 
-function Header() {
+const Header = () => {
   const dispatch = useDispatch();
   const email = useSelector((state) => state.authorization.data.email);
   const avatar = useSelector((state) => state.authorization.data.avatarUrl);
@@ -44,4 +44,4 @@ function Header() {
         )}
     </div>
   );
-} export default Header;
+}; export default Header;

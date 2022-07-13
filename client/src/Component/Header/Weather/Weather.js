@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import instance from 'axios';
 import './Weather.css';
 
-function Weather() {
+const Weather = () => {
   const [weather, setWeather] = useState({});
   const API_KEYS = 'fe21c95c2d46471796123346220907';
   useEffect(() => {
@@ -48,6 +48,6 @@ function Weather() {
       </p>
     </div>
   );
-}
+};
 
 export default Weather;

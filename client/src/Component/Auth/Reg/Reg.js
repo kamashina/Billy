@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { setAuth, setUser } from '../../../store/Reduxauth/login/action';
 import instance from '../../../axios';
 
-function Reg() {
+const Reg = () => {
   const {
     register,
     handleSubmit,
@@ -77,4 +77,4 @@ function Reg() {
       </div>
     </form>
   );
-} export default Reg;
+}; export default Reg;

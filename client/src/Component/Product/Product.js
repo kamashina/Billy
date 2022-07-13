@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import './Product.css';
 
-function Products() {
+const Products = () => {
   const Sale = useSelector((state) => state.Salered);
   return (
 
@@ -30,6 +30,6 @@ function Products() {
 
     </div>
   );
-}
+};
 
 export default Products;

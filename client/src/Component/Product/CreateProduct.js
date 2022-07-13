@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setProd } from '../../store/sale/action';
 
-function CreateProduct() {
+const CreateProduct = () => {
   const [product, setProduct] = useState([]);
   const [name, setName] = useState('');
   const [rub, setRub] = useState('');
@@ -36,6 +36,6 @@ function CreateProduct() {
       </button>
     </div>
   );
-}
+};
 
 export default CreateProduct;
