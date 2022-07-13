@@ -11,7 +11,7 @@ const Main = () => (
         {' '}
         <a href="https://github.com/kamashina/Billy">github</a>
         .
-        Навыки: JavaScript, CSS, HTML, redux, React JS, умею работать с git, писать HTTP запросы , имею общее представление о beckend`е и работе с базами данных. Все мои навыки вы можете посмотреть на проекте githhub: https://github.com/kamashina/Billy
+        Навыки: JavaScript, CSS, HTML, redux, React JS, умею работать с git, писать HTTP запросы , имею общее представление о backend`е и работе с базами данных. Все мои навыки вы можете посмотреть на проекте githhub: https://github.com/kamashina/Billy
         Рассчитываю на стажировку в направлении
         Frontend Developer под руководством опытного наставника
         , с возможностью дальнейшего
