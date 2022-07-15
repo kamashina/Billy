@@ -3,7 +3,6 @@
     background-image: linear-gradient(to right, #553c9a, #b393d3);
 	border-radius: .4em;
     word-wrap:break-word;
-max-width: 25em;
 }.bubble:after{
     content: '';
 	position: absolute;
@@ -53,7 +52,7 @@ padding: 6px;
 }.scroller{
     overflow-y: scroll;
     scroll-snap-align: start;
-max-height: 30em;
+max-height: 50em;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;

@@ -8,7 +8,7 @@ import NewsBox from './NewsBox';
 const CreateNews = () => {
   const API_KEY_NEWS = '9a70ff2ed7514288b7ce8289b9bed5e0';
   const dispatch = useDispatch();
-  const [search, SetSearch] = useState('russia');
+  const [search, SetSearch] = useState('apple');
   const NowDate = moment().format('YYYY-MM-DD');
   function SearchNews() {
     axios.get(`https://newsapi.org/v2/top-headlines?q=${search}&from=${NowDate}&apiKey=${API_KEY_NEWS}`)

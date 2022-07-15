@@ -1,9 +1,9 @@
 .container{
     display: grid;
-    grid-template-columns: 20em 20em 20em;
+    grid-template-columns: 19em 19em 19em;
     grid-template-rows: min-content;
     position: relative;
-gap: 1em;
+gap: 1.5em;
 }.item{
     display: grid;
     background-color: rgb(253, 254, 255);
@@ -11,7 +11,7 @@ gap: 1em;
     text-align: center;
     box-shadow: 0px 8px 16px 6px rgba(0,0,0,0.2);
 }.photo{
-    width: 20em;
+    width: 19em;
     height: 8em;
     grid-column-start: 1 ;
 }.link{

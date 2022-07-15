@@ -17,6 +17,7 @@ import { setUser } from './store/Reduxauth/login/action';
 import Header from './Component/Header/Header';
 import CreateNews from './Component/News/CreateNews';
 import NewsContent from './Component/News/NewsContent/NewsContent';
+import Weather from './Component/Weather/Weather';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -45,21 +46,26 @@ const App = () => {
           <div>
             <div className="singlepage-wrapper">
               <Header />
-              <div className="content">
-                <Routes>
-                  <Route path="/Profile" element={<Profile />} />
-                  <Route path="/Readfile" element={<Readfile />} />
-                  <Route path="/Sorti" element={<Sorti />} />
-                  <Route path="/" element={<Main />} />
-                  <Route path="/Posts" element={<CreatePosts />} />
-                  <Route path="/Product" element={<Showcase />} />
-                  <Route path="/News" element={<CreateNews />} />
-                  {news.News.map(({
-                    title, source, content, description, urlToImage, url, author,
-                  }) => (
-                    <Route path={`/News/${source.id}`} element={<NewsContent title={title} content={content} description={description} urlToImage={urlToImage} name={source.name} url={url} author={author} />} />
-                  ))}
-                </Routes>
+              <div className="wrap-content">
+                <div className="weather">
+                  <Weather />
+                </div>
+                <div className="center-content">
+                  <Routes>
+                    <Route path="/Profile" element={<Profile />} />
+                    <Route path="/Readfile" element={<Readfile />} />
+                    <Route path="/Sorti" element={<Sorti />} />
+                    <Route path="/" element={<Main />} />
+                    <Route path="/Posts" element={<CreatePosts />} />
+                    <Route path="/Product" element={<Showcase />} />
+                    <Route path="/News" element={<CreateNews />} />
+                    {news.News.map(({
+                      title, source, content, description, urlToImage, url, author,
+                    }) => (
+                      <Route path={`/News/${source.id}`} element={<NewsContent title={title} content={content} description={description} urlToImage={urlToImage} name={source.name} url={url} author={author} />} />
+                    ))}
+                  </Routes>
+                </div>
               </div>
               <Footer />
             </div>

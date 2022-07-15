@@ -9,12 +9,22 @@ grid-template-areas:
 ;
 }
 
-.content{
+.wrap-content{
+    display: grid;
+    grid-area: cont;
+    grid-template-columns: 232.5px 60em 232.5px;
+    grid-template-rows: min-content;
    min-height: 800px;
-   height: auto;
     color: white;
-    padding: 1em;
-    justify-self: center;
+    }.center-content{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        grid-column-start:2;
+    }.weather{
+        margin-left: 1em;
+        margin-top: 3em;
+        grid-row-start: 1;
+        grid-column-start:3;
     }
 html
     {

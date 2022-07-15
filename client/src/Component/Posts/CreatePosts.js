@@ -26,15 +26,17 @@ const CreatePosts = () => {
   return (
     <div>
       <title>Диалог</title>
-      <input
-        onChange={(event) => setText(event.target.value)}
-        placeholder="Сообщение"
-        value={text}
-        className="inp"
-      />
-      <button type="button" className="addPost" onClick={addPost}>Опубликовать</button>
       <div className="scroller">
         <Posts posts={posts} />
+      </div>
+      <div className="tool">
+        <input
+          onChange={(event) => setText(event.target.value)}
+          placeholder="Сообщение"
+          value={text}
+          className="inp"
+        />
+        <button type="button" className="addPost" onClick={addPost}>Опубликовать</button>
       </div>
     </div>
   );

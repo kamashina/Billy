@@ -61,12 +61,6 @@ grid-row-start: 1;
     margin-top: 1em;
     grid-row-start: 1;
 
-}.weather{
-    grid-column-start: 2;
-    grid-row-start: 1;
-
-    margin-left:3em;
-    grid-row-start: 1;
 }.ava{
     grid-column-start: 5;
     grid-row-start: 1;
