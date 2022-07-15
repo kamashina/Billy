@@ -38,8 +38,8 @@ const Header = () => {
         )
         : (
           <div className="group">
-            <NavLink className="logout" to="client/src/Component/Auth/reg/Reg.jsx">Регистрация</NavLink>
-            <NavLink className="log" to="client/src/Component/Auth/login/Login.jsx">Вход</NavLink>
+            <NavLink className="logout" to="/Reg.js">Регистрация</NavLink>
+            <NavLink className="log" to="/Login.js">Вход</NavLink>
           </div>
         )}
     </div>

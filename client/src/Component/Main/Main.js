@@ -3,7 +3,7 @@ import './Main.css';
 const Main = () => (
   <div>
     <title>Главное</title>
-    <div className="container">
+    <div className="container2">
       <h1>Резюме</h1>
       <span className="rez">
         Учусь на втором курсе университета в IT направлении(прикладная информатика).

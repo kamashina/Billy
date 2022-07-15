@@ -1,0 +1,16 @@
+.boxcontent{
+    display: grid;
+    grid-template-columns: 50em;
+    grid-template-rows: min-content;
+background-color: rgb(253, 254, 255);
+    border: none;
+    margin-top: 5%;
+    padding: 50px ;
+    text-align: center;
+    box-shadow: 0px 8px 16px 6px rgba(0,0,0,0.2);
+}.newscontent{
+    color:black;
+}.newsphoto{
+    width: 50em;
+    height: 25em;
+}

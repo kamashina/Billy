@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import {
+  Routes, Route,
+} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import instance from './axios';
@@ -13,9 +15,12 @@ import Showcase from './Component/Product/Showcase';
 import Auth from './Component/Auth/Auth';
 import { setUser } from './store/Reduxauth/login/action';
 import Header from './Component/Header/Header';
+import CreateNews from './Component/News/CreateNews';
+import NewsContent from './Component/News/NewsContent/NewsContent';
 
 const App = () => {
   const dispatch = useDispatch();
+  const news = useSelector((state) => state.New);
   const fsfk = useSelector((state) => state.authorization.auth);
   const token = localStorage.getItem('token');
   useEffect(() => {
@@ -48,6 +53,12 @@ const App = () => {
                   <Route path="/" element={<Main />} />
                   <Route path="/Posts" element={<CreatePosts />} />
                   <Route path="/Product" element={<Showcase />} />
+                  <Route path="/News" element={<CreateNews />} />
+                  {news.News.map(({
+                    title, source, content, description, urlToImage, url, author,
+                  }) => (
+                    <Route path={`/News/${source.id}`} element={<NewsContent title={title} content={content} description={description} urlToImage={urlToImage} name={source.name} url={url} author={author} />} />
+                  ))}
                 </Routes>
               </div>
               <Footer />
