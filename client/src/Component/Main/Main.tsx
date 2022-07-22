@@ -1,6 +1,7 @@
+import React from 'react';
 import './Main.css';
 
-const Main = () => (
+const Main: React.FC = () => (
   <div>
     <title>Главное</title>
     <div className="container2">

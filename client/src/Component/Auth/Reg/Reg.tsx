@@ -1,21 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import './Reg.css';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { setAuth, setUser } from '../../../store/Reduxauth/login/action';
-import instance, { API_URL } from '../../../axios';
+import { API_URL, instance } from '../../../axios';
 
-const Reg = () => {
-  const {
-    register,
-    handleSubmit,
-  } = useForm();
+const Reg: React.FC = () => {
 
-  const dispatch = useDispatch();
-  const [ava, setAva] = useState(`${API_URL}/uploads/KSeclybJMGg.jpg`);
-  const handleFileUpload = async (event) => {
-    const file = event.target.files[0];
+  const [ava, setAva] = useState<string>(`${API_URL}/uploads/KSeclybJMGg.jpg`);
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files[0];
     const formData = new FormData();
     formData.append('image', file);
     const { data } = await instance.post('/uploads', formData);
@@ -38,7 +30,6 @@ const Reg = () => {
         localStorage.setItem('token', response.data.token);
         dispatch(setUser(response.data));
         localStorage.setItem('authstatus', true);
-        dispatch(setAuth(true));
       })
     // eslint-disable-next-line no-console
       .catch((error) => console.log(error));

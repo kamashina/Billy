@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Posts from './Posts';
 import './Posts.css';
@@ -8,19 +8,17 @@ const CreatePosts = () => {
   const [text, setText] = useState();
   const [posts, setPost] = useState([]);
   const nick = useSelector((state) => state.authorization.data.nickname);
-  useEffect(() => {
-    setInterval(async () => {
-      await instance.get('/posts/get').then((responce) => {
-        setPost(responce.data);
+  setInterval(() => {
+    instance.get('/posts/get').then((responce) => setPost(responce.data));
+  }, 1000);
+  function addPost(event) {
+    if (event.key === 'Enter') {
+      instance.post('/posts/addpost', {
+        nickname: nick,
+        value: text,
       });
-    }, 1000);
-  }, []);
-  function addPost() {
-    instance.post('/posts/addpost', {
-      nickname: nick,
-      value: text,
-    });
-    setText('');
+      setText('');
+    }
   }
 
   return (
@@ -35,8 +33,8 @@ const CreatePosts = () => {
           placeholder="Сообщение"
           value={text}
           className="inp"
+          onKeyDown={addPost}
         />
-        <button type="button" className="addPost" onClick={addPost}>Опубликовать</button>
       </div>
     </div>
   );

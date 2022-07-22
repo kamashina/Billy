@@ -1,18 +1,15 @@
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { setAuth } from '../../store/Reduxauth/login/action';
+import { useAppSelector } from '../../hooks/useAppSelector';
 import Navbar from '../Navbar/Navbar';
 import './Header.css';
 
-const Header = () => {
-  const dispatch = useDispatch();
-  const email = useSelector((state) => state.authorization.data.email);
-  const avatar = useSelector((state) => state.authorization.data.avatarUrl);
-  const fsfk = JSON.parse(localStorage.getItem('authstatus'));
+const Header: React.FC = () => {
+  
+const {auth, avatar, email}  = useAppSelector((state) => state.authorization)
+
   const Logout = () => {
     localStorage.removeItem('token');
-    localStorage.setItem('authstatus', false);
-    dispatch(setAuth('false'));
   };
   return (
     <div className="header">
@@ -20,7 +17,7 @@ const Header = () => {
         <Navbar />
       </div>
       <span className="main">Проект №1</span>
-      {fsfk
+      {auth
         ? (
           <div className="group">
             <img

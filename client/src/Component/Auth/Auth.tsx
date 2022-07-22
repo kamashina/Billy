@@ -3,13 +3,18 @@ import Header from '../Header/Header';
 import Login from './login/Login';
 import Reg from './Reg/Reg';
 import './Auth.css';
+import React from 'react';
 
-const Auth = () => (
+const Auth: React.FC = () => (
   <div>
     <Header />
     <Routes>
-      <Route path="/Login.js" element={<Login className="login" />} />
-      <Route path="/Reg.js" element={<Reg className="reg" />} />
+      <div className= "login">
+      <Route path="/Login.js" element={<Login />} />
+      </div>
+      <div className= "regi">
+      <Route path="/Reg.js" element={<Reg />} />
+      </div>
     </Routes>
   </div>
 ); export default Auth;

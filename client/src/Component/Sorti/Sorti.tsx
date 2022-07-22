@@ -1,7 +1,7 @@
 import './Sorti.css';
 import React, { useState } from 'react';
 
-const Sorti = () => {
+const Sorti: React.FC = () => {
   let arr = [];
   let arr2 = [];
   const [value, setValue] = useState();

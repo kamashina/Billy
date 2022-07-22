@@ -1,16 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { setAuth } from '../../store/Reduxauth/login/action';
+
+import React, { useEffect } from 'react';
+import { useAppSelector } from '../../hooks/useAppSelector';
 import './Profile.css';
 
-const Profile = () => {
-  const dispatch = useDispatch();
-  const email = useSelector((state) => state.authorization.data.email);
-  const nick = useSelector((state) => state.authorization.data.nickname);
-  const avatar = useSelector((state) => state.authorization.data.avatarUrl);
-  const Logout = () => {
+const Profile: React.FC = () => {
+  const { email, avatarUrl, nickname } = useAppSelector((state) => state.authorization)
+
+
+  const Logout = (e: React.MouseEvent<HTMLElement>) => {
     localStorage.removeItem('token');
-    localStorage.setItem('authstatus', false);
-    dispatch(setAuth('false'));
   };
   return (
     <div className="profile">
@@ -22,7 +20,7 @@ const Profile = () => {
           {email}
         </h1>
         <img
-          src={avatar}
+          src={avatarUrl}
           alt="ava"
           className="avatarka"
         />
@@ -34,7 +32,7 @@ const Profile = () => {
           </ul>
           <ul>
             Ник:
-            {nick}
+            {nickname}
           </ul>
           <button type="button" className="but" onClick={Logout}>
             Выход

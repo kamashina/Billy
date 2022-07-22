@@ -1,17 +1,21 @@
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NewsBox.css';
+import { IntNews } from '../../../types/types';
 
-const NewsBox = () => {
-  const news = useSelector((state) => state.New);
+interface NewsList{ 
+  news: IntNews[];
+}
+
+const NewsBox: React.FC<NewsList>= ({ news }) => {
 
   return (
     <div className="container">
       <title>Новости</title>
-      {news.News.map(({
+      {news.map(({
         title, urlToImage, source,
       }, idx) => (
-        <NavLink className="link" to={`/News/${source.id}`}>
+        <NavLink className="link" to={`/News/${idx}`}>
           <div key={idx}>
             <div className="item">
               <div>

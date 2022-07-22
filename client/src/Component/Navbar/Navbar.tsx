@@ -1,11 +1,15 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/useAppSelector';
 import './Navbar.css';
 
-const Navbar = () => {
-  const fsfk = JSON.parse(localStorage.getItem('authstatus'));
+const Navbar: React.FC = () => {
+  
+  const {auth} = useAppSelector((state) => state.authorization);
+
   return (
     <div>
-      {(fsfk) ? (
+      {(auth) ? (
         <div>
           <div className="nav">
             <div className="dropdown">

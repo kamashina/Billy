@@ -1,9 +1,8 @@
 import {
   Routes, Route,
 } from 'react-router-dom';
+import React from 'react';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import instance from './axios';
 import Sorti from './Component/Sorti/Sorti';
 import Readfile from './Component/Readfile/Readfile';
 import Main from './Component/Main/Main';
@@ -12,34 +11,28 @@ import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
 import CreatePosts from './Component/Posts/CreatePosts';
 import Showcase from './Component/Product/Showcase';
-import Auth from './Component/Auth/Auth';
-import { setUser } from './store/Reduxauth/login/action';
 import Header from './Component/Header/Header';
 import CreateNews from './Component/News/CreateNews';
-import NewsContent from './Component/News/NewsContent/NewsContent';
 import Weather from './Component/Weather/Weather';
+import { useAppSelector } from './hooks/useAppSelector';
+import { useAction } from './hooks/useAction';
+import Auth from './Component/Auth/Auth';
 
-const App = () => {
-  const dispatch = useDispatch();
-  const news = useSelector((state) => state.New);
-  const fsfk = useSelector((state) => state.authorization.auth);
+
+const App: React.FC = () => {
+  const {AxiosUserAction} = useAction()
   const token = localStorage.getItem('token');
+  const user = useAppSelector((state) => state.authorization);
   useEffect(() => {
-    const userData = () => {
-      instance.get('/auth/me', {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-        .then((response) => {
-          dispatch(setUser(response.data));
-        });
-    };
-    userData();
-  }, [fsfk]);
+    AxiosUserAction()
+    console.log(user)
+    }, [])
+
   return (
     <div>
       {(!token) ? (
         <div>
-          <Auth />
+      <Auth/>
         </div>
       )
         : (
@@ -59,11 +52,6 @@ const App = () => {
                     <Route path="/Posts" element={<CreatePosts />} />
                     <Route path="/Product" element={<Showcase />} />
                     <Route path="/News" element={<CreateNews />} />
-                    {news.News.map(({
-                      title, source, content, description, urlToImage, url, author,
-                    }) => (
-                      <Route path={`/News/${source.id}`} element={<NewsContent title={title} content={content} description={description} urlToImage={urlToImage} name={source.name} url={url} author={author} />} />
-                    ))}
                   </Routes>
                 </div>
               </div>

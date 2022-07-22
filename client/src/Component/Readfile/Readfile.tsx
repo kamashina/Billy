@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Readfile.css';
 
-const Readfile = () => {
+const Readfile: React.FC = () => {
   const [zar, setZar] = useState();
   const [voz, setVoz] = useState();
   const [fam, setFam] = useState();

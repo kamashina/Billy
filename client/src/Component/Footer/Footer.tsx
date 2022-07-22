@@ -1,7 +1,8 @@
 import './Footer.css';
 import { API_URL } from '../../axios';
+import React from 'react';
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <div className="footer">
     <p>Создатель: Kamashina</p>
     <div className="vk">
