@@ -30,6 +30,7 @@ dispatch(setAuth(false))
                 <NavLink to="/">Главное</NavLink>
                 <NavLink to="/News">Новости</NavLink>
                 <NavLink to="/Posts">Диалог</NavLink>
+                <NavLink to="/Video">Видео</NavLink>
                 <NavLink to="/Profile">{data.email}</NavLink>
                 <a type="button" onClick={Logout}>Выйти</a>
               </div>

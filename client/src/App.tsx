@@ -14,6 +14,7 @@ import { useAppSelector } from './hooks/useAppSelector';
 import { useAction } from './hooks/useAction';
 import Auth from './Component/Auth/Auth';
 import Main from './Component/Main/Main';
+import Video from './Component/Video/Video';
 
 
 const App: React.FC = () => {
@@ -44,6 +45,7 @@ const App: React.FC = () => {
                     <Route path="/" element={<Main />} />
                     <Route path="/Posts" element={<CreatePosts />} />
                     <Route path="/News/*" element={<CreateNews />} />
+                    <Route path="/Video" element={<Video />} />
                   </Routes>
                 </div>
               </div>
