@@ -1,12 +1,18 @@
 import './Reg.css';
 import React, { useState } from 'react';
 import { API_URL, instance } from '../../../axios';
+import { AxiosUserAction } from 'src/store/action-creator/user';
+import { useDispatch } from 'react-redux';
+import { setAuth } from 'src/store/Reduxauth/action';
 
 const Reg: React.FC= () => {
   const [ava, setAva] = useState<string>(`${API_URL}/uploads/KSeclybJMGg.jpg`);
+  const dispatch = useDispatch()
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [nickname, setNickname] = useState<string>();
+
+  
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files[0];
     const formData = new FormData();
@@ -18,6 +24,8 @@ const Reg: React.FC= () => {
       console.log(err);
     }
   };
+
+
   const handleOnclick = (e: React.MouseEvent<HTMLElement>) => {
     instance
       .post('/auth/register', {
@@ -28,9 +36,13 @@ const Reg: React.FC= () => {
       })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
+        AxiosUserAction();
+        dispatch(setAuth(true))
       })
       .catch((error) => console.log(error));
   };
+
+
   return (
     <div className="Reg">
       <title>Регистрация</title>

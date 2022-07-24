@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
   height: 280px;
-  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  background-color: rgb(34, 34, 34);
   border-radius: 20px;
   grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -36,7 +36,7 @@ color:white;
     grid-area: 3;
 }.inpsub{
     grid-area: sub;
-background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-color: rgb(34, 34, 34);
     border: none;
     color: white;
     padding: 15px 32px;

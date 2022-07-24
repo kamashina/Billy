@@ -1,6 +1,6 @@
 .singlepage-wrapper{
    display: grid;
-grid-template-rows: 6.6em auto auto;
+grid-template-rows: 3.5em auto auto;
 grid-template-columns: 1fr;
 grid-template-areas: 
 "h"
@@ -15,16 +15,18 @@ grid-template-areas:
     grid-template-columns: 232.5px 60em 232.5px;
     grid-template-rows: min-content;
    min-height: 800px;
+   background-color: rgb(20, 20, 20);
     color: white;
     }.center-content{
         margin-top: 2em;
         margin-bottom: 2em;
         grid-column-start:2;
+        background-color: rgb(20, 20, 20);
     }.weather{
         margin-left: 1em;
         margin-top: 3em;
         grid-row-start: 1;
-        grid-column-start:3;
+        grid-column-start:1;
     }
 html
     {
@@ -34,6 +36,7 @@ html
        padding: 0;
        box-sizing: border-box;
        overflow-x: hidden;
+       background-color: rgb(20, 20, 20);
 overflow-y: scroll;
     }
 body

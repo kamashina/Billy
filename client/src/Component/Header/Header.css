@@ -1,22 +1,28 @@
 .header{
     display: grid;
     grid-area: h;
-  background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-color: rgb(34, 34, 34);
   grid-template-columns: 8em repeat(3, 1fr) 12em;
-  grid-template-rows: 6.5em;
+  grid-template-rows: 3.5em;
+border-bottom: 2px solid rgb(51, 51, 51);
+position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.98;
 }
 .project{
     color: white;
     font-size: 200%;
     grid-column-start: 3;
     grid-row-start: 1;
-    margin-top: 30px;
-margin-left: 2em ;
+    margin-top: 8px;
+margin-left: 4em ;
 }
 .log{
     color: white;
     padding: 10px;
-    background-image: linear-gradient(to right, #553c9a, #b393d3);
+    background-color: rgb(34, 34, 34);
         border: none;
         color: white;
         text-align: center;
@@ -25,7 +31,7 @@ margin-left: 2em ;
 .logout{
     color: white;
     padding: 10px;
-background-image: linear-gradient(to right, #553c9a, #b393d3);
+    background-color: rgb(34, 34, 34);
     border: none;
     color: white;
     text-align: center;
@@ -34,7 +40,7 @@ background-image: linear-gradient(to right, #553c9a, #b393d3);
 .logbtn{
     color: white;
     padding: 10px;
-background-image: linear-gradient(to right, #553c9a, #b393d3);
+    background-color: rgb(34, 34, 34);
     border: none;
     color: white;
     text-align: center;
@@ -51,8 +57,6 @@ margin-left: 1em;
 }.ava{
     grid-column-start: 5;
     grid-row-start: 1;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    margin-left: 8em;
+    margin-left: -0.5em;
+    margin-top: -0.9em;
 }

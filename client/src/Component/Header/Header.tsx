@@ -1,7 +1,7 @@
-
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { useAction } from 'src/hooks/useAction';
+import { setAuth } from 'src/store/Reduxauth/action';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import Navbar from '../Navbar/Navbar';
 import './Header.css';
@@ -10,28 +10,19 @@ import './Header.css';
 const Header: React.FC = () => {
   
 const {auth, data}  = useAppSelector((state) => state.authorization)
-
+const dispatch = useDispatch()
   const Logout = () => {
     localStorage.removeItem('token');
+dispatch(setAuth(false))
   };
   return (
     <div className="header">
-      <div className="one">
+      <div className="ava">
         <Navbar />
       </div>
       <span className="project">Проект №1</span>
       {auth
-        ? (
-          <div className="group">
-            <img
-              src={data.avatarUrl}
-              alt="ava"
-              className="ava"
-            />
-            <NavLink className="log" to="/Profile">{data.email}</NavLink>
-            <button type="button" onClick={Logout} className="logbtn">Выйти</button>
-          </div>
-        )
+        ? (null)
         : (
           <div className="group">
             <NavLink className="logout" to="/Reg">Регистрация</NavLink>

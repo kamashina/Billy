@@ -1,7 +1,8 @@
+import { setAuth } from './store/Reduxauth/action';
 import {
   Routes, Route,
 } from 'react-router-dom';
-import React, { useEffect} from 'react';
+import React, { useEffect, useState} from 'react';
 import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
@@ -20,7 +21,6 @@ const App: React.FC = () => {
   const {auth} = useAppSelector((state) => state.authorization);
   useEffect(() => {
     AxiosUserAction();
-    console.log(auth)
   }, []);
 
   return (

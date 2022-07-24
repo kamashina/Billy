@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 16em;
     grid-template-columns: auto;
-    background-color: rgb(253, 254, 255);
+    background-color: rgb(34, 34, 34);
     text-align: center;
     box-shadow: 0px 8px 16px 6px rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -43,5 +43,5 @@ margin-left: 1em;
     font-size: 140%;
 margin-top: 6.4em;
 }.weathercont > p{
-    color:black;
+    color:white;
 }

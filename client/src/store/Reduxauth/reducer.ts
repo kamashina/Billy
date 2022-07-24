@@ -16,9 +16,14 @@ export const UserReducer = (state = initialState, action: userAction): userState
   switch (action.type) {
     case ActionTypes.CHANGE_DATA:
       return {
+        ...state,
         data: action.payload,
-        auth: true,
-      };
+      }
+       case ActionTypes.CHANGE_AUTH:
+       return{
+        ...state,
+        auth: action.payload,
+       }
       default:
       return state;
   }

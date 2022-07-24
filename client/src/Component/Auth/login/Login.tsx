@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useAction } from 'src/hooks/useAction';
-import { useAppSelector } from 'src/hooks/useAppSelector';
+import { setAuth } from 'src/store/Reduxauth/action';
 import { instance } from '../../../axios';
 import './Login.css';
 
 const Login: React.FC = () => {
+  const dispatch = useDispatch()
   const [changeemail, setEmail] = useState<string>(''); 
   const [changepassword, setPassword] = useState<string>('');
-  const {auth} = useAppSelector((state) => state.authorization);
   const { AxiosUserAction } = useAction();
+
+
 const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
     instance.post('/auth/login', {
           email: changeemail,
@@ -16,11 +19,12 @@ const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
       })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
-        console.log(response);
-      }) .catch((err) => {  console.log(err); });
-      AxiosUserAction();
-console.log(auth)
+        AxiosUserAction();
+        dispatch(setAuth(true))
+      }).catch((err) => {  console.log(err); });
     }
+
+    
   return (
     <div>
       <title>Вход</title>
@@ -30,12 +34,14 @@ console.log(auth)
           onChange = {(event) => setEmail(event.target.value)}
           placeholder="Почта"
           className="inp1"
+          value ={changeemail}
         />
         <input
           onChange={(event) => setPassword(event.target.value)}
           placeholder="Пароль"
-          type="password"
           className="inp2"
+          value={changepassword}
+          type="password"
         />
         <button type="button" className="inpsub" onClick={clickHandler}>Войти</button>
       </div>

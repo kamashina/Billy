@@ -8,7 +8,7 @@ box-shadow: 0px 8px 16px 6px rgba(0,0,0,0.2);
 margin-right: auto;
   height: 360px;
   border-radius: 20px;
-  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  background-color: rgb(34, 34, 34);
     gap: 10px;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr
 }
@@ -32,7 +32,7 @@ font-weight:bold;
 color:rgb(40, 0, 41);
 }.regisrt{
     grid-area: 5;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-color: rgb(34, 34, 34);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -42,7 +42,7 @@ color:rgb(40, 0, 41);
     border-radius: 20px;
     font-size: 16px;
 }.fileup{
-  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  background-color: rgb(34, 34, 34);
     border: none;
     color: white;
     padding: 15px 32px;

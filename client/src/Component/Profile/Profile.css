@@ -3,7 +3,7 @@
     grid-area: prof;
 grid-template-columns: 200px 500px;
 grid-template-rows: 300px;
-background-image: linear-gradient(to left, #553c9a, #b393d3);
+background-color: rgb(34, 34, 34);
     border: none;
     margin-top: 5%;
     padding: 50px 100px;
@@ -23,7 +23,7 @@ background-image: linear-gradient(to left, #553c9a, #b393d3);
     margin-top: 3em;
     margin-left: -2em;
 }.but{
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-color: rgb(51, 51, 51);
     border: none;
     color: white;
     padding: 15px 32px;
