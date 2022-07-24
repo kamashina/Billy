@@ -22,6 +22,7 @@ setUrl(e.target.value)
     controls ={true}
     width = "960px"
     height = "503px"
+    loop ={true}
     />
     </div>
     </div>
