@@ -1,7 +1,13 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { IPosts } from 'types/types';
 import './Posts.css';
 
-const Posts = ({ posts }) => (
+interface Posts{
+  posts: IPosts[];
+}
+
+const Posts: React.FC<Posts> = ({ posts }) => (
   <div>
     {posts.map(({ value, nickname }, idx) => (
       <div key={idx} className="bubble">

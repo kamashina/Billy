@@ -41,7 +41,12 @@
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ios": "react-native run-ios --simulator='iPhone SE'",
+   "android": "react-native run-android",
+   "lint": "esw src/**",
+   "lint-watch": "esw -w --changed src/**",
+   "postinstall":"cd ./ios && pod install && cd .."
   },
   "eslintConfig": {
     "extends": [
@@ -69,23 +74,24 @@
     "https://github.com/kamashina/lab3.git"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
-    "eslint": "^8.19.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-n": "^15.2.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
     "prettier": "2.7.1",
     "prettier-eslint": "^15.0.1",
     "raw.macro": "^0.4.2",
+    "typescript": "^4.7.4",
     "url-loader": "^4.1.1"
   },
   "repository": "https://github.com/kamashina/Billy.git"

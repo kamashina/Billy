@@ -3,12 +3,12 @@ import { ActionTypes, userAction } from './action';
 
 
 export const initialState = {
-  data: [{
-    id: "",
+ data: {
+  id: "",
 	email: "",
 	nickname: "",
 	avatarUrl: "http://localhost:1983/uploads/KSeclybJMGg.jpg",
-  }],
+},
   auth: false,
 };
 

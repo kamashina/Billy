@@ -8,4 +8,3 @@ export const API_URL: string = 'http://localhost:1983';
 export const instance = axios.create({
   baseURL: `${API_URL}`,
 });
-

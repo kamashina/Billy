@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useAppSelector } from '../../hooks/useAppSelector';
+import { useAppSelector } from 'src/hooks/useAppSelector';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -19,9 +19,6 @@ const Navbar: React.FC = () => {
                 <NavLink to="/Profile">Профиль</NavLink>
                 <NavLink to="/News">Новости</NavLink>
                 <NavLink to="/Posts">Диалог</NavLink>
-                <NavLink to="/Readfile">Загрузка</NavLink>
-                <NavLink to="/sorti">Сортировка</NavLink>
-                <NavLink to="/Product">Товары</NavLink>
               </div>
             </div>
           </div>

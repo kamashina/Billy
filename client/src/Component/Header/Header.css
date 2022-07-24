@@ -5,62 +5,49 @@
   grid-template-columns: 8em repeat(3, 1fr) 12em;
   grid-template-rows: 6.5em;
 }
-.main{
-    grid-area: main;
+.project{
     color: white;
     font-size: 200%;
     grid-column-start: 3;
     grid-row-start: 1;
     margin-top: 30px;
 margin-left: 2em ;
-grid-row-start: 1;
 }
 .log{
     color: white;
     padding: 10px;
-    grid-area: lo;
     background-image: linear-gradient(to right, #553c9a, #b393d3);
         border: none;
         color: white;
         text-align: center;
         text-decoration: none;
-        grid-row-start: 1;
 }
 .logout{
     color: white;
     padding: 10px;
-      grid-area: out;
 background-image: linear-gradient(to right, #553c9a, #b393d3);
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
-    grid-row-start: 1;
 }
-
 .logbtn{
     color: white;
     padding: 10px;
-      grid-area: btn;
 background-image: linear-gradient(to right, #553c9a, #b393d3);
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
-    grid-row-start: 1;
 }.one{
-grid-area:menu;
 grid-column-start: 1;
 grid-row-start: 1;
 margin-top: 1em;
 margin-left: 1em;
-grid-row-start: 1;
 }.group{
     grid-column-start: 5;
     grid-row-start: 1;
     margin-top: 1em;
-    grid-row-start: 1;
-
 }.ava{
     grid-column-start: 5;
     grid-row-start: 1;
@@ -68,5 +55,4 @@ grid-row-start: 1;
     height: 3em;
     border-radius: 50%;
     margin-left: 8em;
-    grid-row-start: 1;
 }

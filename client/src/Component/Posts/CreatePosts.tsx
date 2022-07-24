@@ -1,20 +1,21 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { instance } from 'src/axios';
+import { useAppSelector } from 'src/hooks/useAppSelector';
 import Posts from './Posts';
 import './Posts.css';
-import instance from '../../axios';
 
-const CreatePosts = () => {
-  const [text, setText] = useState();
+
+const CreatePosts:React.FC = () => {
+  const [text, setText] = useState<string>();
   const [posts, setPost] = useState([]);
-  const nick = useSelector((state) => state.authorization.data.nickname);
+  const {data} = useAppSelector((state) => state.authorization);
   setInterval(() => {
     instance.get('/posts/get').then((responce) => setPost(responce.data));
   }, 1000);
-  function addPost(event) {
-    if (event.key === 'Enter') {
+  function addPost(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'Enter') {
       instance.post('/posts/addpost', {
-        nickname: nick,
+        nickname: data.nickname,
         value: text,
       });
       setText('');

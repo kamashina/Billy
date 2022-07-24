@@ -1,22 +1,23 @@
+import { NewsInfo } from './../../../types/types';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route, Routes, useParams } from 'react-router-dom';
 import './NewsBox.css';
-import { IntNews } from '../../../types/types';
+import NewsContent from './NewsContent/NewsContent';
 
 interface NewsList{ 
-  news: IntNews[];
+  news: NewsInfo[];
 }
 
-const NewsBox: React.FC<NewsList>= ({ news }) => {
+const NewsBox: React.FC<NewsList>= ( {news} ) => {
 
   return (
     <div className="container">
       <title>Новости</title>
       {news.map(({
-        title, urlToImage, source,
-      }, idx) => (
+        title, urlToImage,source
+      },idx) => (
         <NavLink className="link" to={`/News/${idx}`}>
-          <div key={idx}>
+          <div key={title}>
             <div className="item">
               <div>
                 <img src={urlToImage} alt="img" className="photo" />

@@ -4,7 +4,7 @@ import { useAppSelector } from '../../hooks/useAppSelector';
 import './Profile.css';
 
 const Profile: React.FC = () => {
-  const { email, avatarUrl, nickname } = useAppSelector((state) => state.authorization)
+  const { data } = useAppSelector((state) => state.authorization)
 
 
   const Logout = (e: React.MouseEvent<HTMLElement>) => {
@@ -17,10 +17,10 @@ const Profile: React.FC = () => {
         <h1>
           Профиль
           {' '}
-          {email}
+          {data.email}
         </h1>
         <img
-          src={avatarUrl}
+          src={data.avatarUrl}
           alt="ava"
           className="avatarka"
         />
@@ -28,11 +28,11 @@ const Profile: React.FC = () => {
           <p>Данные аккаунта:</p>
           <ul>
             Почта:
-            {email}
+            {data.email}
           </ul>
           <ul>
             Ник:
-            {nickname}
+            {data.nickname}
           </ul>
           <button type="button" className="but" onClick={Logout}>
             Выход

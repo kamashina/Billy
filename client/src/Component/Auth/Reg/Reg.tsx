@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { API_URL, instance } from '../../../axios';
 
 const Reg: React.FC = () => {
-
   const [ava, setAva] = useState<string>(`${API_URL}/uploads/KSeclybJMGg.jpg`);
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files[0];
