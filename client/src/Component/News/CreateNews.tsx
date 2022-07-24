@@ -5,6 +5,7 @@ import moment from 'moment';
 import NewsBox from './NewsBox';
 import { Route, Routes } from 'react-router-dom';
 import NewsContent from './NewsContent/NewsContent';
+import "./CreateNews.css"
 
 const CreateNews: React.FC = () => {
   const [news, setNews] = useState<NewsInfo[]>([]);
@@ -44,8 +45,9 @@ const CreateNews: React.FC = () => {
         placeholder="Новости"
         value={search}
         onKeyPress={onKeyDownPress}
+        className ="inpnews"
       />
-      <button onClick={clickHandler} type="button">Поиск</button>
+      <button className='btnnews' onClick={clickHandler} type="button">Поиск</button>
        <Routes>
       <Route path = "/" element={<NewsBox news = {news}/>} />
       {news.map(({},idx) => <Route path = {`/${idx}`} element = {<NewsContent news = {news} idx = {idx}/>}/>)}
