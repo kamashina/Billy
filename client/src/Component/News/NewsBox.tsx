@@ -1,8 +1,7 @@
 import { NewsInfo } from './../../../types/types';
 import React from 'react';
-import { NavLink, Route, Routes, useParams } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './NewsBox.css';
-import NewsContent from './NewsContent/NewsContent';
 
 interface NewsList{ 
   news: NewsInfo[];

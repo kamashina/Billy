@@ -1,7 +1,7 @@
 import {
   Routes, Route,
 } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import './App.css';
 import Footer from './Component/Footer/Footer';
 import Profile from './Component/Profile/Profile';
@@ -21,7 +21,7 @@ const App: React.FC = () => {
   useEffect(() => {
     AxiosUserAction();
     console.log(auth)
-  }, [auth]);
+  }, []);
 
   return (
     <div>
