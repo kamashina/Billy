@@ -1,10 +1,12 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import './Reg.css';
 import React, { useState } from 'react';
 import { API_URL, instance } from '../../../axios';
 
-const Reg: React.FC = () => {
+const Reg: React.FC= () => {
   const [ava, setAva] = useState<string>(`${API_URL}/uploads/KSeclybJMGg.jpg`);
+  const [email, setEmail] = useState<string>();
+  const [password, setPassword] = useState<string>();
+  const [nickname, setNickname] = useState<string>();
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files[0];
     const formData = new FormData();
@@ -13,59 +15,52 @@ const Reg: React.FC = () => {
     try {
       setAva(`${API_URL}${data.url}`);
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.log(err);
     }
   };
-  const onSubmit = (user) => {
+  const handleOnclick = (e: React.MouseEvent<HTMLElement>) => {
     instance
       .post('/auth/register', {
-        email: user.pochta,
-        password: user.pass,
-        nickname: user.nick,
+        email,
+        password,
+        nickname,
         avatarUrl: ava,
       })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
-        dispatch(setUser(response.data));
-        localStorage.setItem('authstatus', true);
       })
-    // eslint-disable-next-line no-console
       .catch((error) => console.log(error));
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="Reg">
       <title>Регистрация</title>
-      <div className="Reg">
-        <h1 className="mess">Регистрация</h1>
-        <input
-          {...register('pochta')}
-          className="email"
-          type="text"
-          placeholder="Почта"
-        />
-        <input
-          {...register('nick')}
-          className="nick"
-          type="text"
-          placeholder="Ник"
-        />
-        <input
-          {...register('pass')}
-          className="pass"
-          type="password"
-          placeholder="Пароль"
-        />
-        <input
-          onChange={handleFileUpload}
-          className="fileup"
-          type="file"
-        />
-        <input
-          type="submit"
-          className="regisrt"
-        />
-      </div>
-    </form>
+      <h1 className="mess">Регистрация</h1>
+      <input
+        onChange={(event) => setEmail(event.target.value)}
+        className="email"
+        type="text"
+        placeholder="Почта"
+      />
+
+      <input
+        onChange={(event) => setNickname(event.target.value)}
+        className="nick"
+        type="text"
+        placeholder="Ник"
+      />
+      <input
+        onChange={(event) => setPassword(event.target.value)}
+        className="pass"
+        type="password"
+        placeholder="Пароль"
+      />
+      <input
+        onChange={handleFileUpload}
+        className="fileup"
+        type="file"
+      />
+      <button onClick={handleOnclick} type="button" className="regisrt">Регистрация</button>
+    </div>
   );
-}; export default Reg;
+};
+export default Reg;

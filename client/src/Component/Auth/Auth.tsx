@@ -9,8 +9,8 @@ const Auth: React.FC = () => (
   <div>
     <Header />
     <Routes>
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Reg" element={<Reg />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Reg" element={<Reg />} />
     </Routes>
   </div>
 ); export default Auth;

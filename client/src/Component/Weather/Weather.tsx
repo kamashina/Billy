@@ -10,15 +10,14 @@ interface IntWeather{
             city: string;
             time: string;
 }
-
 const Weather: React.FC = () => {
   const [weather, setWeather] = useState<IntWeather>({
     temp: '',
-        wind: '',
-        text: '',
-        humidity: '',
-        city: '',
-        time: '',
+    wind: '',
+    text: '',
+    humidity: '',
+    city: '',
+    time: '',
   });
   const API_KEYS = 'fe21c95c2d46471796123346220907';
   async function addWeather() {
@@ -31,13 +30,14 @@ const Weather: React.FC = () => {
           humidity: responce.data.current.humidity,
           city: responce.data.location.name,
           time: responce.data.location.localtime,
-      });
+        });
       });
   }
   useEffect(() => {
     addWeather();
   }, []);
   return (
+
     <div className="weathercont">
       <p className="temp">
         {weather.temp}
