@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player/youtube';
 import './Video.css';
 
 const Video: React.FC = () => {
-    const [url, setUrl] = useState<string>('https://www.youtube.com/watch?v=BqmYjcvFxcw');
+    const [url, setUrl] = useState<string>('https://www.youtube.com/watch?v=3BYQ6WmKLeU&t=550s');
     const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUrl(e.target.value);
     };

@@ -15,13 +15,13 @@ grid-template-areas:
     grid-template-columns: 232.5px 60em 232.5px;
     grid-template-rows: min-content;
    min-height: 800px;
-   background-color: rgb(20, 20, 20);
+   opacity: 0.9;
+   background-image: "client/public/image/1618595490_3-funart_pro-p-oboi-fon-zadnii-fon-chernii-3.jpeg";
     color: white;
     }.center-content{
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: 4em;
+        margin-bottom: 4em;
         grid-column-start:2;
-        background-color: rgb(20, 20, 20);
     }.weather{
         margin-left: 1em;
         margin-top: 3em;
@@ -36,7 +36,6 @@ html
        padding: 0;
        box-sizing: border-box;
        overflow-x: hidden;
-       background-color: rgb(20, 20, 20);
 overflow-y: scroll;
     }
 body
