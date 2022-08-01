@@ -1,9 +1,10 @@
 import './Reg.css';
 import React, { useState } from 'react';
 import { API_URL, instance } from '../../../axios';
-import { AxiosUserAction } from 'src/store/action-creator/user';
 import { useDispatch } from 'react-redux';
-import { setAuth } from 'src/store/Reduxauth/action';
+import { setAuth } from '../../../store/Reduxauth/action';
+import { AxiosUserAction } from '../../../store/action-creator/user';
+
 
 const Reg: React.FC= () => {
   const [ava, setAva] = useState<string>(`${API_URL}/uploads/KSeclybJMGg.jpg`);

@@ -1,10 +1,7 @@
-
     export interface thisSource{
     id: string;
     name: string;
   }
-
-
 
 
 export interface userState{
@@ -22,6 +19,8 @@ export interface IPosts{
   nickname: string;
   value: string;
 }
+
+
 export interface NewsInfo{
 author: string;
 content:  string;
@@ -34,3 +33,4 @@ title:  string;
 url: string;
 urlToImage: string;
 }
+

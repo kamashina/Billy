@@ -25,7 +25,7 @@ const Weather: React.FC = () => {
       .then((responce) => {
         setWeather({
           temp: responce.data.current.temp_c,
-          wind: responce.data.current.wind_kph,
+          wind: responce.data.current.wind_mph,
           text: responce.data.current.condition.icon,
           humidity: responce.data.current.humidity,
           city: responce.data.location.name,
@@ -48,7 +48,7 @@ const Weather: React.FC = () => {
         {' '}
         {weather.wind}
         {' '}
-        км/ч
+        м/с
       </p>
       <img className="logo" src={weather.text} alt="logo" />
       <p className="humidity">

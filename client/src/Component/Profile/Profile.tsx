@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setAuth } from 'src/store/Reduxauth/action';
 import { useAppSelector } from '../../hooks/useAppSelector';
+import { setAuth } from '../../store/Reduxauth/action';
 import './Profile.css';
+import { userInfo } from '../../../types/types';
 
 const Profile: React.FC = () => {
   const { data } = useAppSelector((state) => state.authorization)

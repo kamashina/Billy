@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
-import { instance } from 'src/axios';
+import { instance } from '../../axios';
 
-import { userAction, ActionTypes, setAuth } from '../Reduxauth/action';
+import { userAction, UserActionTypes, setAuth } from '../Reduxauth/action';
 
 const token = localStorage.getItem('token');
 
@@ -10,7 +10,7 @@ export const AxiosUserAction = () => async (dispatch: Dispatch<userAction>) => {
     headers: { Authorization: `Bearer ${token}` },
   })
     .then((response: any) => {
-      dispatch({ type: ActionTypes.CHANGE_DATA, payload: response.data, auth: true});
+      dispatch({ type: UserActionTypes.CHANGE_DATA, payload: response.data, auth: true});
       dispatch(setAuth(true))
     })
     .catch((error: any) => {

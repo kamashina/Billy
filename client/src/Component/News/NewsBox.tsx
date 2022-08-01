@@ -13,7 +13,7 @@ const NewsBox: React.FC<NewsList>= ( {news} ) => {
     <div className="container">
       <title>Новости</title>
       {news.map(({
-        title, urlToImage,source
+        title, urlToImage
       },idx) => (
         <NavLink className="link" to={`/News/${idx}`}>
           <div key={title}>

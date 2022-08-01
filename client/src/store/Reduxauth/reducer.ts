@@ -1,12 +1,12 @@
 import { userState } from './../../../types/types';
-import { ActionTypes, userAction } from './action';
+import { UserActionTypes, userAction } from './action';
 
 
 export const initialState = {
  data: {
-  id: "",
-	email: "",
-	nickname: "",
+  id: "0",
+	email: "Ghost",
+	nickname: 'Ghost',
 	avatarUrl: "http://localhost:1983/uploads/KSeclybJMGg.jpg",
 },
   auth: false,
@@ -14,12 +14,12 @@ export const initialState = {
 
 export const UserReducer = (state = initialState, action: userAction): userState => {
   switch (action.type) {
-    case ActionTypes.CHANGE_DATA:
+    case UserActionTypes.CHANGE_DATA:
       return {
         ...state,
         data: action.payload,
       }
-       case ActionTypes.CHANGE_AUTH:
+       case UserActionTypes.CHANGE_AUTH:
        return{
         ...state,
         auth: action.payload,

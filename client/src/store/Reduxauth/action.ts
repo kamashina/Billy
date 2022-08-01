@@ -1,27 +1,23 @@
+import { userInfo } from "../../../types/types";
 
-export enum ActionTypes{
+export enum UserActionTypes{
   CHANGE_DATA = 'CHANGE_DATA',
   CHANGE_AUTH = 'CHANGE_AUTH',
   CHANGE_TOKEN = 'CHANGE_TOKEN',
 }
 
-export type userAction = FetchUserAction | FetchAuthAction | FetchTokenAction
+export type userAction = FetchUserAction | FetchAuthAction
 
 interface FetchUserAction{
-  type: ActionTypes.CHANGE_DATA;
-  payload: any;
+  type: UserActionTypes.CHANGE_DATA;
+  payload: userInfo;
 }
 interface FetchAuthAction{
-  type: ActionTypes.CHANGE_AUTH;
+  type: UserActionTypes.CHANGE_AUTH;
   payload: boolean ;
 }
-interface FetchTokenAction{
-  type: ActionTypes.CHANGE_TOKEN;
-  payload: boolean ;
-}
-
 
 export const setAuth = (auth: boolean) => ({ 
-type: ActionTypes.CHANGE_AUTH,
+type: UserActionTypes.CHANGE_AUTH,
 payload: auth
 })

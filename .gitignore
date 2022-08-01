@@ -7,6 +7,7 @@ client/node_modules
 /.pnp
 .pnp.js
 .eslintrc.js
+.eslintrc.json
 .prettierrc.js
 # testing
 /coverage
@@ -24,3 +25,13 @@ client/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+{(todo.length !== 0) ?
+    <div>
+    {todo.map(({message}) => <Todo message = {message} />)}
+    </div>
+  : (<div className='empty'> 
+  <span>Пусто...</span>
+  </div>)
+  }
